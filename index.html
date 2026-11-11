@@ -1,0 +1,1161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>Cristina Romero Macias</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: left-aligned editorial grid. Big name opener, outcome tiles, ticket-stub case cards with a perforated divider, quiet career and skills index. */
+:root {
+  --bg: #FAF8F5;
+  --surface: #FFFFFF;
+  --fg: #1A1818;
+  --muted: #57534D;
+  --line: #DDD8D0;
+  --accent: #0E6B6B;
+  --accent-ink: #FFFFFF;
+  --card-line: #E7E5E5;
+  --font-display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141211; --surface: #1D1A19; --fg: #F4F1EC; --muted: #A9A29A;
+    --line: #322E2B; --accent: #5FD0C8; --accent-ink: #141211; --card-line: #322E2B; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141211; --surface: #1D1A19; --fg: #F4F1EC; --muted: #A9A29A;
+  --line: #322E2B; --accent: #5FD0C8; --accent-ink: #141211; --card-line: #322E2B; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 48px;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  z-index: 10; background: var(--surface);
+}
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+.wrap { max-width: 1120px; margin: 0 auto; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; letter-spacing: -0.02em; }
+p { margin: 0; }
+.label {
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted);
+}
+
+/* Header */
+header.top {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9;
+  background: var(--surface); border-bottom: 1px solid var(--line);
+  margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px)));
+  padding-inline: max(16px, env(safe-area-inset-left, 0px));
+}
+header.top .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: center; justify-content: space-between; padding-block: 14px; }
+.brand { font-family: var(--font-display); font-weight: 700; text-decoration: none; letter-spacing: -0.01em; }
+nav { display: flex; flex-wrap: wrap; gap: 4px 22px; }
+nav a { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; color: var(--muted); padding: 4px 0; }
+nav a:hover { color: var(--accent); }
+
+/* Hero */
+.hero { padding-block: 72px 56px; display: grid; gap: 28px; }
+.hero h1 { font-weight: 800; font-size: clamp(2.4rem, 7.8vw, 5.8rem); line-height: 0.98; letter-spacing: -0.04em; }
+.hero .role { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.25rem, 3vw, 1.75rem); color: var(--accent); }
+.hero .lede { max-width: 62ch; font-size: clamp(1.05rem, 2vw, 1.25rem); }
+.hero .meta { display: flex; flex-wrap: wrap; gap: 8px 28px; }
+
+/* Outcome tiles */
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.tile { padding: 20px 20px 22px 0; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.tile + .tile { padding-left: 20px; border-left: 1px solid var(--line); }
+.tile .num { font-family: var(--font-display); font-weight: 800; font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.tile p { color: var(--muted); font-size: 15px; line-height: 1.45; }
+@media (max-width: 700px) {
+  .tile + .tile { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+  .tile { padding-right: 0; }
+}
+
+/* Sections */
+section { padding-block: 64px 8px; scroll-margin-top: 64px; }
+.sec-head { display: grid; gap: 10px; margin-bottom: 32px; }
+.sec-head h2 { font-size: clamp(1.9rem, 4.5vw, 3rem); font-weight: 700; }
+.sec-head p { max-width: 60ch; color: var(--muted); }
+
+/* Case cards */
+.cases { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.case {
+  background: var(--surface); border: 1px solid var(--card-line); border-radius: 28px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  display: grid; grid-template-rows: 1fr auto; min-width: 0; overflow: hidden;
+}
+.case.wide { grid-column: 1 / -1; }
+.case .body { padding: 26px 26px 24px; display: grid; gap: 14px; align-content: start; }
+.case h3 { font-size: clamp(1.4rem, 2.6vw, 1.9rem); font-weight: 700; }
+.case ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.case li { padding-left: 18px; position: relative; color: var(--fg); }
+.case li::before { content: ""; position: absolute; left: 0; top: 0.7em; width: 8px; height: 1px; background: var(--accent); }
+.case.wide ul { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 8px 28px; }
+.perf { border-top: 1px solid var(--card-line); margin-inline: 26px; }
+
+.stub { margin: 16px 26px 24px; padding: 14px 18px; background: color-mix(in srgb, var(--fg) 5%, var(--surface)); border: 1px solid var(--card-line); border-radius: 16px; display: flex; flex-wrap: wrap; gap: 6px 24px; align-items: baseline; }
+.stub .key { background: none; padding: 0; border-radius: 0; font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: var(--accent); }
+.stub .note { color: var(--muted); font-size: 15px; }
+@media (max-width: 800px) { .cases { grid-template-columns: minmax(0, 1fr); } }
+
+/* Career */
+.career { }
+.job { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 8px 32px; padding-block: 22px; border-bottom: 1px solid var(--line); }
+.job .when { font-family: var(--font-mono); font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.job h3 { font-size: 1.25rem; font-weight: 700; }
+.job .org { color: var(--accent); font-weight: 600; }
+.job p { margin-top: 6px; max-width: 70ch; }
+@media (max-width: 700px) { .job { grid-template-columns: minmax(0, 1fr); } }
+
+/* Skills */
+.skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0 40px; }
+.skill { padding-block: 18px; border-bottom: 1px solid var(--line); display: grid; gap: 8px; min-width: 0; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 14px; font-weight: 500; border: 1px solid var(--card-line); background: var(--surface); padding: 6px 14px; border-radius: 999px; }
+
+/* Education */
+.edu { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px 40px; }
+.edu h3 { font-size: 1.15rem; font-weight: 700; margin-top: 6px; }
+.edu p { color: var(--muted); font-size: 15px; margin-top: 4px; }
+
+/* Contact */
+.contact { margin-top: 64px; background: var(--fg); color: var(--bg); border-radius: 6px; padding: clamp(28px, 6vw, 56px); display: grid; gap: 22px; }
+.contact h2 { font-size: clamp(2rem, 5vw, 3.4rem); font-weight: 800; }
+.contact .label { color: inherit; opacity: 0.7; }
+.contact-row { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; }
+.contact a.btn, .contact button {
+  font: inherit; font-weight: 600; background: var(--bg); color: var(--fg); border: 0; border-radius: 999px;
+  padding: 10px 22px; cursor: pointer; text-decoration: none;
+}
+.contact .addr { font-family: var(--font-mono); font-size: 15px; overflow-wrap: anywhere; user-select: all; }
+.contact .plain { color: inherit; }
+footer { padding-top: 28px; }
+
+/* Case page */
+.back { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; color: var(--fg); border: 1.5px solid var(--fg); border-radius: 999px; padding: 8px 16px 8px 12px; background: var(--surface); }
+.back:hover { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+#view-accessibility, #view-accprog, #view-designsystems, #view-localisation, #view-quant { padding-top: 40px; }
+.case-hero { display: grid; gap: 22px; padding-block: 32px 40px; }
+.case-hero h1 { font-weight: 800; font-size: clamp(2.3rem, 7vw, 5rem); line-height: 1; letter-spacing: -0.035em; }
+.case-hero .lede { max-width: 66ch; font-size: clamp(1.05rem, 2vw, 1.2rem); }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px 28px; padding-top: 8px; }
+.facts div { display: grid; gap: 4px; min-width: 0; }
+.facts dd, .facts dt { margin: 0; }
+.facts dd { font-weight: 500; }
+.facts { margin: 0; }
+.prose { max-width: 70ch; display: grid; gap: 14px; }
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px 48px; }
+.cols h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; }
+.list { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.list li { padding-left: 18px; position: relative; }
+.list li::before { content: ""; position: absolute; left: 0; top: 0.75em; width: 8px; height: 1px; background: var(--accent); }
+.timeline { }
+.step { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 6px 32px; padding-block: 18px; border-bottom: 1px solid var(--line); }
+.step .when { font-family: var(--font-mono); font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.step h3 { font-size: 1.15rem; font-weight: 700; }
+.step p { margin-top: 4px; max-width: 70ch; color: var(--fg); }
+@media (max-width: 700px) { .step { grid-template-columns: minmax(0, 1fr); } }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; min-width: 640px; font-size: 15px; }
+th, td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+th { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+tr:last-child td { border-bottom: 0; }
+td.d { font-family: var(--font-mono); font-size: 13px; white-space: nowrap; color: var(--muted); }
+.more.soon { color: var(--muted); text-decoration: none; font-weight: 500; cursor: default; }
+.more { display: inline-block; font-weight: 600; color: var(--accent); text-underline-offset: 3px; }
+.keys { display: flex; flex-wrap: wrap; gap: 8px; }
+.key { font-family: var(--font-mono); font-size: 13px; border: 1px solid var(--card-line); background: var(--surface); padding: 6px 14px; border-radius: 999px; }
+
+/* Tabs */
+nav a[aria-current="page"] { color: var(--fg); box-shadow: inset 0 -2px 0 var(--accent); }
+.cta { display: inline-block; font-weight: 600; background: var(--fg); color: var(--bg); text-decoration: none; padding: 12px 26px; border-radius: 999px; }
+.hero .meta .label { display: inline-block; padding: 6px 14px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--accent) 18%, transparent); background: color-mix(in srgb, var(--accent) 7%, var(--surface)); color: var(--accent); font-weight: 500; }
+.cta:hover { background: var(--accent); color: var(--accent-ink); }
+#view-portfolio { padding-top: 48px; }
+
+.case a.more { display: block; text-align: center; background: var(--fg); color: var(--bg); border-radius: 16px; padding: 14px 18px; text-decoration: none; font-weight: 600; }
+.case a.more:hover { background: var(--accent); color: var(--accent-ink); }
+.case .more.soon { display: block; text-align: center; background: color-mix(in srgb, var(--fg) 9%, var(--bg)); color: var(--muted); border-radius: 16px; padding: 14px 18px; font-weight: 500; }
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Cristina Romero Macias</a>
+    <nav aria-label="Sections">
+      <a href="#top" id="tab-home">Home</a>
+      <a href="#portfolio" id="tab-portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <div id="view-home">
+  <div class="hero">
+    <p class="label">London, United Kingdom</p>
+    <h1>Cristina Romero Macias</h1>
+    <p class="role">UX / Product Design Leader</p>
+    <p class="lede">I turn business goals into design strategy, and strategy into products people use. I have 13+ years of experience building and scaling design practices in entertainment, automotive, fintech and media. At ATG I grew a design function from nothing into a team of 12. I led 20+ initiatives from discovery to delivery, from the first native app to digital accessibility and European expansion. I use AI to deliver faster, and behavioural data and experiments to decide with evidence. PhD in Human-Computer Interaction.</p>
+    <div class="meta">
+      <span class="label">13+ years in design</span>
+      <span class="label">Design strategy</span>
+      <span class="label">Design systems</span>
+      <span class="label">Design ops</span>
+    </div>
+    <p><a class="cta" href="#portfolio">View portfolio</a></p>
+  </div>
+
+  <section id="skills">
+    <div class="sec-head">
+      <p class="label">Skills</p>
+      <h2>Where I work</h2>
+    </div>
+    <div class="skills">
+      <div class="skill"><span class="label">Leadership</span><div class="chips"><span class="chip">Product Design Leadership</span><span class="chip">UX Strategy</span><span class="chip">Design Ops</span><span class="chip">Hiring</span><span class="chip">Team Building and Coaching</span><span class="chip">Competency Frameworks</span><span class="chip">OKR Definition</span><span class="chip">Stakeholder Management</span><span class="chip">Agile / Scrum</span></div></div>
+      <div class="skill"><span class="label">Design</span><div class="chips"><span class="chip">UX / Product Design</span><span class="chip">Interaction Design</span><span class="chip">Information Architecture</span><span class="chip">Design Systems</span><span class="chip">Responsive Design</span><span class="chip">Prototyping</span></div></div>
+      <div class="skill"><span class="label">Accessibility and inclusion</span><div class="chips"><span class="chip">Digital Accessibility Strategy</span><span class="chip">WCAG Audits</span><span class="chip">Accessibility Benchmarking</span><span class="chip">Champions Networks</span><span class="chip">European Accessibility Act</span><span class="chip">Inclusive Design</span></div></div>
+      <div class="skill"><span class="label">Internationalisation</span><div class="chips"><span class="chip">Localisation Process Design</span><span class="chip">Content Design for European and American Markets</span><span class="chip">Internationalisation</span></div></div>
+      <div class="skill"><span class="label">Research and data</span><div class="chips"><span class="chip">User Research</span><span class="chip">Usability Testing</span><span class="chip">Design Sprints</span><span class="chip">UX Benchmarking Dashboards</span><span class="chip">A/B Testing (Optimizely)</span><span class="chip">Mouseflow</span><span class="chip">Qualitative UX Dashboards</span><span class="chip">Quantitative Analysis</span><span class="chip">Google Analytics</span></div></div>
+      <div class="skill"><span class="label">AI and tools</span><div class="chips"><span class="chip">AI Adoption and Enablement</span><span class="chip">AI-assisted design and research (Claude)</span><span class="chip">Figma</span><span class="chip">Framer</span><span class="chip">Adobe Suite</span><span class="chip">Jira</span></div></div>
+    </div>
+  </section>
+
+  <section id="career">
+    <div class="sec-head">
+      <p class="label">Career</p>
+      <h2>13+ years, five teams</h2>
+    </div>
+    <div class="career">
+      <div class="job">
+        <span class="when">Nov 2022 to present</span>
+        <div>
+          <h3>Head of Product Design · <span class="org">ATG Entertainment</span></h3>
+          <p>Built and lead the product design function of 12 designers. Design strategy for ATG Tickets, AI adoption, a data-driven design practice, the Design System, accessibility and localisation.</p>
+        </div>
+      </div>
+      <div class="job">
+        <span class="when">Apr 2020 to Oct 2022</span>
+        <div>
+          <h3>Design Program Manager and UX Manager · <span class="org">Cazoo</span></h3>
+          <p>UX strategy and Design Ops for the consumer automotive platform as part of the UX Leadership team. Led the Design System and Accessibility programmes, and built career progression matrices and tools for designers.</p>
+        </div>
+      </div>
+      <div class="job">
+        <span class="when">Sep 2019 to Mar 2020</span>
+        <div>
+          <h3>Senior Product Designer · <span class="org">Fluidly</span></h3>
+          <p>Led design across two product teams on a cashflow platform for SMEs, using customer journey analysis to improve adoption and retention.</p>
+        </div>
+      </div>
+      <div class="job">
+        <span class="when">May 2018 to Aug 2019</span>
+        <div>
+          <h3>Lead Designer / Senior Product Designer · <span class="org">Quorso</span></h3>
+          <p>Sole lead designer. Embedded a UX-centric process across the product lifecycle and implemented a Design System on a legacy platform.</p>
+        </div>
+      </div>
+      <div class="job">
+        <span class="when">Apr 2016 to Apr 2018</span>
+        <div>
+          <h3>UX Designer · <span class="org">Racing Post</span></h3>
+          <p>Multi-platform UX across web and mobile. Co-created a cross-departmental Design System and drove Design Sprints and monthly usability testing.</p>
+        </div>
+      </div>
+    </div>
+    <p class="label" style="margin-top:16px">Earlier roles at Instronix, IriadeAna and Queen Mary University research are available on request.</p>
+  </section>
+
+  <section id="education">
+    <div class="sec-head">
+      <p class="label">Education and languages</p>
+    </div>
+    <div class="edu">
+      <div>
+        <p class="label">2008 to 2013</p>
+        <h3>PhD, Computer Science (HCI)</h3>
+        <p>Queen Mary University of London. Human-centred CAPTCHA design that draws on image understanding, human perception and UX.</p>
+      </div>
+      <div>
+        <p class="label">2002 to 2008</p>
+        <h3>MEng, Telecommunications Engineering</h3>
+        <p>Universidad Autónoma de Madrid.</p>
+      </div>
+      <div>
+        <p class="label">June 2022</p>
+        <h3>Measuring the European Accessibility Act</h3>
+        <p>LEAD ME Summer School, London.</p>
+      </div>
+      <div>
+        <p class="label">Languages</p>
+        <h3>Spanish, English, Italian, French</h3>
+        <p>Spanish native, English fluent, Italian working, French elementary.</p>
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <div id="view-portfolio" hidden>
+  <section id="work">
+    <div class="sec-head">
+      <p class="label">Head of Product Design · Nov 2022 to present</p>
+      <h2>ATG Entertainment</h2>
+      <p>Four areas where I set the strategy and the standards for ATG's digital products.</p>
+    </div>
+
+  <div class="tiles" role="list" aria-label="Selected outcomes at ATG Entertainment">
+    <div class="tile" role="listitem"><span class="num">20+ <span style="display:block;font-size:0.4em;letter-spacing:-0.01em;margin-top:6px">Initiatives</span></span><p>Design strategy taken through discovery to delivery, from launching the first native app to subscriptions, hospitality, rebranding and European expansion.</p></div>
+    <div class="tile" role="listitem"><span class="num">12 <span style="display:block;font-size:0.4em;letter-spacing:-0.01em;margin-top:6px">team members</span></span><p>Built through design ops: hiring, competencies, KPIs, processes, methodologies, training and coaching.</p></div>
+    <div class="tile" role="listitem"><span class="num">100% <span style="display:block;font-size:0.4em;letter-spacing:-0.01em;margin-top:6px">DS adoption</span></span><p>Fully built UI library across all digital teams, on shared tokens for web, iOS and Android, with a distributed governance system and a guild to support innovation.</p></div>
+    <div class="tile" role="listitem"><span class="num">30% <span style="display:block;font-size:0.4em;letter-spacing:-0.01em;margin-top:6px">efficiency increase</span></span><p>AI digital transformation introduced to the design team through prompt design, research synthesis tools, code prototyping and AI coaching.</p></div>
+  </div>
+    <div style="height:32px"></div>
+
+    <div class="cases">
+      <article class="case">
+        <div class="body">
+          <p class="label">ATG Entertainment · Use case</p>
+          <h3>Localisation</h3>
+          <p>I established the localisation process for content design across European and American markets, so the same product reads right in each region and keeps one voice.</p>
+          <p><span class="more soon" data-href="#localisation">Read about the initiative &middot; coming soon</span></p>
+        </div>
+        <div class="perf"></div>
+        <div class="stub"><span class="key">Europe and US</span><span class="note">A repeatable process for content design.</span></div>
+      </article>
+      <article class="case">
+        <div class="body">
+          <p class="label">ATG Entertainment · Use case</p>
+          <h3>UX quantitative framework</h3>
+          <p>I extended the quantitative UX insights model used in the UK and US to European markets, adapting the global platform to each region and informing how offers are best used in the checkout flow.</p>
+          <p><span class="more soon" data-href="#quantitative-framework">Read about the initiative &middot; coming soon</span></p>
+        </div>
+        <div class="perf"></div>
+        <div class="stub"><span class="key">UK, US, Europe</span><span class="note">One insights model across three regions.</span></div>
+      </article>
+      <article class="case">
+        <div class="body">
+          <p class="label">ATG Entertainment · Use case</p>
+          <h3>Accessibility</h3>
+          <p>I led the digital accessibility strategy for ATG: audits, benchmarking against WCAG, and accessibility built into delivery as a non-functional requirement.</p>
+          <p><span class="more soon" data-href="#accessibility">Read about the initiative &middot; coming soon</span></p>
+        </div>
+        <div class="perf"></div>
+        <div class="stub"><span class="key">WCAG</span><span class="note">Audits and benchmarking that feed into how teams plan and ship.</span></div>
+      </article>
+      <article class="case">
+        <div class="body">
+          <p class="label">ATG Entertainment · Use case</p>
+          <h3>Design systems</h3>
+          <p>I architected and curated the design system for ATG's digital products to strengthen visual identity, enforce brand consistency and speed up delivery, with tokenisation, a theme builder and distributed governance.</p>
+          <p><span class="more soon" data-href="#design-systems">Read about the initiative &middot; coming soon</span></p>
+        </div>
+        <div class="perf"></div>
+        <div class="stub"><span class="key">100% adoption</span><span class="note">Across all digital teams at ATG.</span></div>
+      </article>
+    </div>
+  </section>
+
+  </div>
+
+  <div id="view-accessibility" hidden>
+    <a class="back" href="#portfolio"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>Portfolio</a>
+
+    <div class="case-hero">
+      <p class="label">ATG Entertainment &middot; UX use case</p>
+      <h1>Accessibility transformation</h1>
+      <p class="lede">A customer who cannot use our products with a screen reader, a keyboard or magnification cannot book a ticket or find the information they need. I led the accessibility strategy for ATG's digital products. This case covers how we moved from occasional audits to a standing programme across the web, apps and content: one standard, a remediation plan ordered by user impact, clear decisions on the hardest components, measurement, and a hand-over that stops open items from being lost.</p>
+      <dl class="facts">
+        <div><dt class="label">Role</dt><dd>Owner of accessibility strategy</dd></div>
+        <div><dt class="label">Standard</dt><dd>WCAG 2.2 level AA</dd></div>
+        <div><dt class="label">Scope</dt><dd>Web checkout, seatmap, native app, content</dd></div>
+        <div><dt class="label">Markets</dt><dd>UK, US, then Germany, Spain and Austria</dd></div>
+      </dl>
+    </div>
+
+    <div class="tiles" role="list" aria-label="Accessibility programme figures">
+      <div class="tile" role="listitem"><span class="num">55</span><p>WCAG 2.2 A and AA success criteria in scope</p></div>
+      <div class="tile" role="listitem"><span class="num">20–40%</span><p>of violations found by automated scanning alone, so manual testing is required</p></div>
+      <div class="tile" role="listitem"><span class="num">8 of 10</span><p>seatmap Very High findings fixed. Two were deferred with a documented decision</p></div>
+      <div class="tile" role="listitem"><span class="num">~80%</span><p>of High and Medium findings complete by June 2026</p></div>
+    </div>
+
+    <section id="a-goals">
+      <div class="sec-head">
+        <p class="label">Goals</p>
+        <h2>What the work had to achieve</h2>
+        <p>Around 16 million people in the UK and about 30% of US adults have a disability. Older customers, including high spenders, meet many of the same barriers.</p>
+      </div>
+      <div class="cols">
+        <div>
+          <h3>Business goals</h3>
+          <ul class="list">
+            <li>Let every customer complete checkout independently.</li>
+            <li>Protect conversion and revenue while the fixes ship.</li>
+            <li>Meet US and EU expectations before the launch in Germany, Spain and Austria.</li>
+            <li>Build accessibility into delivery so it stops being a retrofit.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Customer goals</h3>
+          <ul class="list">
+            <li>Find a show and a date with a keyboard or screen reader.</li>
+            <li>Choose seats and read price and availability without relying on colour.</li>
+            <li>Zoom and enlarge text without losing a function.</li>
+            <li>Find access information early and reach a person when needed.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="a-history">
+      <div class="sec-head">
+        <p class="label">Context and evidence</p>
+        <h2>Where it started and where it stands</h2>
+        <p>The programme builds on earlier reviews. Each one changed what we prioritised.</p>
+      </div>
+      <div class="timeline">
+        <div class="step"><span class="when">May 2022</span><div><h3>UK access review</h3><p>Experts with lived experience tested ATG Tickets against WCAG 2.1, including a blind screen reader user on video. Findings included sideways scrolling on mobile, a seating plan that relied on colour, weak alt text, "click here" links, a carousel that could not be stopped, and access information buried in long text. This review is the baseline the programme builds on.</p></div></div>
+        <div class="step"><span class="when">2024</span><div><h3>US venue review</h3><p>A screen reader review of the Kings Theatre and Broadway in Detroit ticket journeys against WCAG 2.1. An expert screen reader user could browse shows but could not select tickets. The seat layout could not be used by keyboard alone, and buying a wheelchair space was not possible.</p></div></div>
+        <div class="step"><span class="when">Oct to Nov 2025</span><div><h3>End-to-end audit for the US launch</h3><p>An expert audit of atgtickets.com, end to end, with assistive technology. The checkout round found 59 issues, rated by user impact from Violation 1 (low) to Barrier 5 (severe). Two were severe and 12 were very high. An accessibility statement and contact route were published for launch.</p></div></div>
+        <div class="step"><span class="when">Mar to Jun 2026</span><div><h3>Checkout remediation</h3><p>Fixes tracked in Jira and worked through in priority order, with every deferral logged with its rationale, alternatives, risk and owner.</p></div></div>
+        <div class="step"><span class="when">Sep 2026</span><div><h3>Audit of standalone and subscription flows</h3><p>An expert audit of 12 pages found 73 issues: 14 low, 30 medium, 25 high and 4 very high. The most common failures were name, role and value (29) and information and relationships (23). These are mostly build-quality issues, which is why the programme moved to acceptance criteria and automated checks.</p></div></div>
+      </div>
+    </section>
+
+    <section id="a-approach">
+      <div class="sec-head">
+        <p class="label">Approach</p>
+        <h2>Six decisions that shaped the programme</h2>
+      </div>
+      <div class="cols">
+        <div>
+          <h3>One standard, tested in layers</h3>
+          <p>WCAG 2.2 AA is the target for UK, US and EU checkout. Automated scanning runs in QA. Manual testing with assistive technology and annual expert reviews cover the rest. Each fix is reviewed by the developer, checked by the test engineer against acceptance criteria, then tested by the squad.</p>
+        </div>
+        <div>
+          <h3>An audit is a baseline</h3>
+          <p>Finishing every audit finding does not make a product compliant. We recommended an independent specialist review before anyone makes a formal compliance claim.</p>
+        </div>
+        <div>
+          <h3>Fix at source, not with an overlay</h3>
+          <p>We compared two widget vendors on monitoring, automated fixes, help desk and support. A widget went live to give customers assistive options while we fixed the code, and we did not rely on it for core issues.</p>
+        </div>
+        <div>
+          <h3>Order work by user impact</h3>
+          <p>Anything that stops a customer finishing a purchase comes first. Cosmetic items come last.</p>
+        </div>
+        <div>
+          <h3>Write down what you do not fix</h3>
+          <p>Deferred items go in a decision log with the reason, the alternatives and the risk, so they are not rediscovered as surprises.</p>
+        </div>
+        <div>
+          <h3>Make it part of normal delivery</h3>
+          <p>Accessibility checks sit in ticket acceptance criteria. Test engineers add automated tests to checkout so a minimum level holds from release to release.</p>
+        </div>
+      </div>
+      <div style="height:28px"></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Phase</th><th>What</th><th>Why</th><th>Status in June 2026</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Fix Barrier 5 and Barrier 4 findings</td><td>Any user can finish checkout</td><td>Complete across seatmap, payment page and calendar (20 May)</td></tr>
+            <tr><td>2</td><td>Fix Barrier 3 findings</td><td>Better checkout for users with access needs</td><td>About 80%, finishing by end of June</td></tr>
+            <tr><td>3a</td><td>Fix low-risk Violation 1 and 2 findings</td><td>A polished experience</td><td>Planned for mid August</td></tr>
+            <tr><td>3b</td><td>Automated accessibility tests in checkout</td><td>Prevent regressions</td><td>Planned</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="a-seatmap">
+      <div class="sec-head">
+        <p class="label">Deep dive</p>
+        <h2>The seatmap</h2>
+        <p>The seatmap was the hardest part of checkout. It is an interactive SVG map, so standard HTML semantics do not apply. Roles, names and keyboard behaviour had to be designed and built.</p>
+      </div>
+      <div class="cols">
+        <div>
+          <h3>Keyboard model</h3>
+          <p>An engineering spike in March 2026 settled the navigation. Seats are grouped by level and row and ordered by coordinates, so one set of rules works for every UK and US venue without hardcoded values.</p>
+          <div class="keys" style="margin-top:12px" aria-label="Keyboard controls">
+            <span class="key">Tab: next section or row</span>
+            <span class="key">Arrow keys: next seat</span>
+            <span class="key">Enter / Space: select</span>
+            <span class="key">Esc: go back</span>
+          </div>
+        </div>
+        <div>
+          <h3>What shipped</h3>
+          <ul class="list">
+            <li>Seats exposed as buttons with accessible names</li>
+            <li>Grid, row and cell structure for the map</li>
+            <li>Visible focus and live-region announcements</li>
+            <li>A modal for ticket selection with a focus trap</li>
+            <li>Keyboard access to "View from seat", zoom and date controls</li>
+          </ul>
+        </div>
+        <div>
+          <h3>The colour problem</h3>
+          <p>Price bands get their colours from a fixed palette, and the colours move down the palette when top prices sell out. The 2022 review had already advised shape as well as colour. A full visual fix means a pattern, shape or label on every seat in every venue configuration, which belongs in the seatmap redesign.</p>
+          <p style="margin-top:10px">In the meantime, seats announce price and availability to screen readers, and the colours were tested to a 3:1 contrast ratio. A diagonal stripe and a checkmark are lined up for user testing.</p>
+        </div>
+        <div>
+          <h3>Zoom at 200% and above</h3>
+          <p>At 200% zoom the site switches to the mobile layout, which has no date arrows. The back button still works as an alternative path. Redesigning every breakpoint from 200% to 400% for one edge case was disproportionate for the current map, so the item moved to the new seatmap.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="a-decisions">
+      <div class="sec-head">
+        <p class="label">Decision log</p>
+        <h2>Four calls and the reasoning</h2>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Date</th><th>Decision</th><th>Rationale</th><th>Alternative and risk</th></tr></thead>
+          <tbody>
+            <tr><td class="d">16 Mar 2026</td><td>Reuse a seatmap colour set already tested at 3:1 contrast.</td><td>The work was done and verified by another team.</td><td>Re-review the colours. Rejected as duplicate effort.</td></tr>
+            <tr><td class="d">16 Mar 2026</td><td>Announce price and availability through ARIA labels now. Add visible non-colour indicators in the seatmap redesign.</td><td>Patterns must be validated with users, and the component is due for replacement.</td><td>Patterns, icons or text labels now. The interim fix does not fully meet colour-alone guidance for users with colour vision deficiency.</td></tr>
+            <tr><td class="d">3 Apr 2026</td><td>Do not rebuild date navigation for 200%+ zoom on the current seatmap.</td><td>Expected layout switch. The back button is an alternative path.</td><td>Full breakpoint redesign. Low risk, limited to zoomed users on one page.</td></tr>
+            <tr><td class="d">11 May 2026</td><td>Leave the promo code field as optional.</td><td>Users with no code should not be blocked. Disabling Apply would add a worse experience.</td><td>None viable. No accessibility cost.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="a-measure">
+      <div class="sec-head">
+        <p class="label">Measuring impact</p>
+        <h2>How we know it is working</h2>
+        <p>We tracked clicks on the accessibility widget, on the hypothesis that clicks fall as the underlying issues are fixed. The data is cached and refreshed periodically, so it is a signal and not an exact count. From April to May 2026, UK clicks held steady and US clicks fell gradually.</p>
+      </div>
+      <div class="cols">
+        <div>
+          <h3>Success measures</h3>
+          <ul class="list">
+            <li>Customers complete checkout with assistive tools, confirmed by tested scenarios.</li>
+            <li>Fewer contact centre and box office reports of being unable to check out online.</li>
+            <li>Checkout conversion holds during the updates.</li>
+            <li>100% of audit-identified A and AA issues resolved.</li>
+            <li>Less reliance on the widget.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Process measures</h3>
+          <ul class="list">
+            <li>Accessibility checks in ticket acceptance criteria.</li>
+            <li>Automated accessibility tests running in the checkout pipeline.</li>
+            <li>An annual manual review and an up-to-date accessibility statement.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="a-system">
+      <div class="sec-head">
+        <p class="label">Beyond checkout</p>
+        <h2>Accessibility across the product</h2>
+      </div>
+      <div class="cols">
+        <div>
+          <h3>Native app</h3>
+          <p>Ten iOS findings against WCAG A and AA sit at the lowest backlog priority while they gate the German and Spanish launches. My app use case sets a target of zero before EU launch and recommends raising their priority and running the same audit on Android and the web views.</p>
+        </div>
+        <div>
+          <h3>Tickets, transfer and basket</h3>
+          <p>Each use case carries WCAG 2.2 AA as a requirement: contrast, touch targets, VoiceOver and TalkBack labels, large-text-safe cards, a level-two heading for the order summary, and live announcements for totals, errors and the basket timer.</p>
+        </div>
+        <div>
+          <h3>Content design</h3>
+          <p>The content guidelines set a reading age of 11 to 12, a proper heading structure, short sentences, plain language and sentence case. They are adapted for German, Austrian and Spanish copy.</p>
+        </div>
+        <div>
+          <h3>Design system</h3>
+          <p>The digital ticket is a design-system component with WCAG 2.2 AA and large-text safety as requirements, so each fix is made once and every product team inherits it.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="a-open">
+      <div class="sec-head">
+        <p class="label">Open items and next steps</p>
+        <h2>What remains</h2>
+        <p>I would rather show the open work than hide it.</p>
+      </div>
+      <div class="cols">
+        <div>
+          <ul class="list">
+            <li>Commission an independent specialist before any formal compliance claim.</li>
+            <li>Run an end-to-end VoiceOver key navigation review of checkout. Most testing so far used the Tab key.</li>
+            <li>Assign colour-only pricing and 200% zoom to the new seatmap as named requirements with an owner.</li>
+          </ul>
+        </div>
+        <div>
+          <ul class="list">
+            <li>Audit the voucher and upsell screens, which earlier audits did not cover.</li>
+            <li>Finish the remaining medium and low findings, then request a re-audit.</li>
+            <li>Raise the priority of the iOS findings and audit Android.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="a-learned">
+      <div class="sec-head">
+        <p class="label">Lessons</p>
+        <h2>What I would repeat</h2>
+      </div>
+      <div class="prose">
+        <p>Name accessibility requirements before the build starts. Most of the cost on the seatmap came from retrofitting a component that was designed without them.</p>
+        <p>Keep the decision log. It turned arguments about what was done into a record of what was chosen and why.</p>
+        <p>Treat audits as a starting list, and measure the programme by whether customers can buy a ticket.</p>
+      </div>
+      <div style="height:20px"></div>
+      <p><a class="more" href="#accessibility-programme">Next: how the programme was built</a></p>
+    </section>
+  </div>
+
+  <div id="view-designsystems" hidden>
+    <a class="back" href="#portfolio"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>Portfolio</a>
+    <div class="case-hero">
+      <p class="label">ATG Entertainment &middot; UX use case</p>
+      <h1>Design systems</h1>
+      <p class="lede">I architected and curated the design system for ATG's digital products to strengthen visual identity, enforce brand consistency and speed up delivery. This case covers the token architecture, the theme builder, how contributions are governed, and how the process is measured.</p>
+      <dl class="facts">
+        <div><dt class="label">Role</dt><dd>Architect and curator of the design system</dd></div>
+        <div><dt class="label">Built with</dt><dd>Engineering and Marketing</dd></div>
+        <div><dt class="label">Platforms</dt><dd>Web, iOS and Android</dd></div>
+        <div><dt class="label">Adoption</dt><dd>All digital teams</dd></div>
+      </dl>
+    </div>
+    <section id="ds-tokens">
+      <div class="sec-head"><p class="label">Tokenisation</p><h2>One set of values, every platform</h2></div>
+      <div class="cols">
+        <div><h3>Tokens</h3><p>Design tokens for colour, type, spacing and other values are defined once in Backdrop, the web component library, and shared with the iOS and Android libraries.</p></div>
+        <div><h3>Migration</h3><p>Products are moving away from hardcoded values onto tokens, so a change to a value is made once and reaches every product that uses it.</p></div>
+      </div>
+    </section>
+    <section id="ds-themes">
+      <div class="sec-head"><p class="label">Theme builder</p><h2>Themes generated from the tokens</h2></div>
+      <div class="prose"><p>The theme builder generates and previews themes from the token set, so brands and products can be themed without custom code. Dark mode comes from adopting the system.</p></div>
+    </section>
+    <section id="ds-governance">
+      <div class="sec-head"><p class="label">Governance</p><h2>Distributed, with a guild</h2></div>
+      <div class="cols">
+        <div><h3>Operating model</h3><p>An engineering RFC sets out distributed governance: platform owners and a guild, covering contribution, care, component separation and maintenance. The guild supports innovation, so teams can propose and build without waiting on a central team.</p></div>
+        <div><h3>Request and review process</h3><p>A Slack intake workflow feeds Jira, with full and lite versions of the process depending on the size of the request.</p></div>
+      </div>
+    </section>
+    <section id="ds-measures">
+      <div class="sec-head"><p class="label">Measuring the system</p><h2>How we know it works</h2></div>
+      <ul class="list">
+        <li>100% adoption across all digital teams.</li>
+        <li>Process health tracked against targets, such as 95%+ of requests starting with a ticket and 100% complete handoffs.</li>
+        <li>Component documentation for the full library, backed by a Storybook and Figma parity audit.</li>
+        <li>Accessibility built in once and inherited by every product team, as with the digital ticket component.</li>
+      </ul>
+    </section>
+  </div>
+
+  <div id="view-localisation" hidden>
+    <a class="back" href="#portfolio"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>Portfolio</a>
+    <div class="case-hero">
+      <p class="label">ATG Entertainment &middot; UX use case</p>
+      <h1>Localisation</h1>
+      <p class="lede">As ATG Tickets moved from the UK and US into Germany, Austria and Spain, copy that was translated word for word would have sounded foreign and cost customers' trust. I established a localisation process for content design: one set of principles, and a content design guide written for each market with its own address form, register and terminology, so the product keeps one voice and reads naturally in each region.</p>
+      <dl class="facts">
+        <div><dt class="label">Role</dt><dd>Led the localisation process</dd></div>
+        <div><dt class="label">Markets</dt><dd>UK, US, Germany, Austria, Spain</dd></div>
+        <div><dt class="label">Covers</dt><dd>App, mobile web and website</dd></div>
+        <div><dt class="label">Output</dt><dd>A content design guide per market</dd></div>
+      </dl>
+    </div>
+
+    <div class="tiles" role="list" aria-label="Localisation at a glance">
+      <div class="tile" role="listitem"><span class="num">5</span><p>markets with their own tone of voice: UK, US, Germany, Austria and Spain</p></div>
+      <div class="tile" role="listitem"><span class="num">3</span><p>new market guides, in German, Austrian German and Spanish, built from the UK and US original</p></div>
+      <div class="tile" role="listitem"><span class="num">3</span><p>principles shared by every market: human, clear and experience-led</p></div>
+      <div class="tile" role="listitem"><span class="num">5</span><p>Austrian platforms benchmarked before the Austrian guide was finalised</p></div>
+    </div>
+
+    <section id="loc-problem">
+      <div class="sec-head">
+        <p class="label">The problem</p>
+        <h2>Translation is not localisation</h2>
+      </div>
+      <div class="prose">
+        <p>ATG's content design guide was written in English for UK and US customers. Launching in Europe raised questions that a translation cannot answer. Do customers expect to be addressed formally or informally? Which word for a ticket sounds right at a theatre? How is a price, a date or a seat written? How should an error message sound when someone is paying?</p>
+        <p>The aim was to answer those questions once, per market, and write them down so designers, content writers, engineers and agencies make the same choices.</p>
+      </div>
+    </section>
+
+    <section id="loc-approach">
+      <div class="sec-head">
+        <p class="label">Approach</p>
+        <h2>One source guide, adapted for each market</h2>
+        <p>Each market guide follows the same structure, so a change in one can be compared with the others.</p>
+      </div>
+      <div class="cols">
+        <div>
+          <h3>What stays the same</h3>
+          <ul class="list">
+            <li>Three principles: human, clear and experience-led.</li>
+            <li>The tone table: proud, helpful, simple and transparent, never pushy, vague or generic.</li>
+            <li>Persuade, never pressure. We let a premium product speak for itself and offer extras without pushing.</li>
+            <li>Patterns for errors, info boxes, warnings, confirmations, buttons, fields, empty states and notifications.</li>
+            <li>Accessibility and inclusive language, and a glossary of ATG terms.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>What changes in each market</h3>
+          <ul class="list">
+            <li>Address form and when the tone becomes more formal.</li>
+            <li>Vocabulary and the local terms for theatre and ticketing.</li>
+            <li>Spelling norms and how dates, times, numbers and prices are written.</li>
+            <li>Reading level, sentence style and how inclusive language is handled.</li>
+            <li>Examples drawn from real ATG screens in that language.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="loc-markets">
+      <div class="sec-head">
+        <p class="label">Market decisions</p>
+        <h2>What each guide decided</h2>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Market</th><th>Address</th><th>Style</th><th>Notable rules</th></tr></thead>
+          <tbody>
+            <tr><td>UK and US</td><td>Source guide</td><td>Plain language at a reading age of 11 to 12</td><td>Regional vocabulary, such as basket and cart, or interval and intermission</td></tr>
+            <tr><td>Germany</td><td>Informal "du", in lower case. Slightly more formal wording for payments and technical or legal information, without switching to "Sie"</td><td>Premium but natural, pitched at young adults with a mid to higher education. Active, short and free of slang</td><td>Duden spelling. Gender-neutral wording where possible, with the gender star as a fallback. Anglicisms only where they are idiomatic</td></tr>
+            <tr><td>Austria</td><td>Formal "Sie", in line with the Austrian market</td><td>Dignified and inviting, in the language of Austrian cultural life</td><td>Austrian spelling norm and Austrian theatre and ticketing terms. Less common English words replaced with natural Austrian phrasing</td></tr>
+            <tr><td>Spain</td><td>Informal, with a formal tone reserved for specific situations</td><td>Written so that an 11 to 12 year old can follow it. Short texts</td><td>Definite articles in place of English-style possessives. Fewer capital letters than English. No full stop after titles and buttons</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="loc-austria">
+      <div class="sec-head">
+        <p class="label">Deep dive</p>
+        <h2>Austria: testing the German guide against the market</h2>
+        <p>Austria shares a language with Germany but not its conventions, so I did not reuse the German guide. I benchmarked five Austrian theatre and ticketing platforms and used the findings to adapt it.</p>
+      </div>
+      <div class="cols">
+        <div>
+          <h3>Address form</h3>
+          <p>Every Austrian-owned platform uses the formal "Sie" throughout, including in warm and inviting copy. The one exception is an international brand that uses the informal "du" as a deliberate brand decision. The Austrian guide uses "Sie", unlike the German one.</p>
+        </div>
+        <div>
+          <h3>Two words for a ticket</h3>
+          <p>"Karte" is the institutional, premium term, and "Ticket" is the neutral, transactional one. Both are correct Austrian usage. The finding challenged a strict do and don't. "Karte" suits a premium brand, but banning "Ticket" in technical contexts such as transfer does not reflect the market, so it went to the team as a decision.</p>
+        </div>
+        <div>
+          <h3>Showing what changed</h3>
+          <p>The Austrian guide is colour-coded against the German version. One colour marks content changed for the market, one marks extra localisation context, and one marks the switch from "du" to "Sie" and the Austrian terms. Reviewers can see each decision and challenge it.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="loc-review">
+      <div class="sec-head">
+        <p class="label">Process</p>
+        <h2>How the guides were made and checked</h2>
+      </div>
+      <div class="timeline">
+        <div class="step"><span class="when">1</span><div><h3>Start from the source guide</h3><p>The UK and US content design guide supplies the structure, principles and UI patterns.</p></div></div>
+        <div class="step"><span class="when">2</span><div><h3>Adapt, with real examples</h3><p>Each guide is rewritten in its language, with examples from ATG screens in that language and a glossary of do's and don'ts for local terms.</p></div></div>
+        <div class="step"><span class="when">3</span><div><h3>Review with native speakers</h3><p>Drafts went through several versions with comments from native-speaking colleagues in each market before the final guides.</p></div></div>
+        <div class="step"><span class="when">4</span><div><h3>Benchmark where the market is unclear</h3><p>For Austria, a competitor analysis settled the address form and terminology questions with evidence, and left an open question for the team on "Karte" and "Ticket".</p></div></div>
+        <div class="step"><span class="when">5</span><div><h3>Put the guide to work</h3><p>The UK and US tone of voice is packaged as a reusable AI skill that drafts interface copy for a region and checks it for generic AI-sounding writing before it ships.</p></div></div>
+      </div>
+    </section>
+
+    <section id="loc-learned">
+      <div class="sec-head">
+        <p class="label">Lessons</p>
+        <h2>What I would repeat</h2>
+      </div>
+      <div class="prose">
+        <p>Do not assume a shared language means a shared voice. Germany and Austria needed different answers to the first question in the guide, how to address the customer.</p>
+        <p>Keep the principles global and let the details be local. The shared structure is what lets one team maintain several markets.</p>
+        <p>Look at what the market does before deciding. Evidence from live platforms turned a matter of opinion into a question of register.</p>
+      </div>
+    </section>
+  </div>
+
+  <div id="view-quant" hidden>
+    <a class="back" href="#portfolio"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>Portfolio</a>
+    <div class="case-hero">
+      <p class="label">ATG Entertainment &middot; UX use case</p>
+      <h1>UX quantitative framework</h1>
+      <p class="lede">I extended the quantitative UX insights model used in the UK and US to European markets, adapting the global platform to each region and informing how offers are best used in the checkout flow.</p>
+      <dl class="facts">
+        <div><dt class="label">Role</dt><dd>Owner of the UX insights model</dd></div>
+        <div><dt class="label">Regions</dt><dd>UK, US and Europe</dd></div>
+        <div><dt class="label">Tools</dt><dd>Optimizely, Mouseflow, Google Analytics</dd></div>
+      </dl>
+    </div>
+    <section id="q-method">
+      <div class="sec-head"><p class="label">Method</p><h2>Three layers of evidence</h2></div>
+      <div class="cols">
+        <div><h3>UX benchmarking dashboards</h3><p>A shared view of how each region performs, so the same measures are compared across the UK, US and Europe.</p></div>
+        <div><h3>A/B testing frameworks</h3><p>Experiments run with Optimizely to test design changes, including how offers are used in checkout.</p></div>
+        <div><h3>Behaviour analysis</h3><p>Mouseflow recordings and heatmaps validate design decisions against real user behaviour.</p></div>
+      </div>
+    </section>
+  </div>
+
+  <div id="view-accprog" hidden>
+    <a class="back" href="#portfolio"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>Portfolio</a>
+
+    <div class="case-hero">
+      <p class="label">ATG Entertainment &middot; UX use case</p>
+      <h1>Building the accessibility programme</h1>
+      <p class="lede">Accessibility reviews at ATG started as separate audits for separate sites. I led the accessibility strategy, and this case covers how those audits became a programme: a single standard, a way of scoping and rating audits, defined roles, lines on the product roadmap, and measures that show progress. It is the operating model behind the <a class="more" href="#accessibility">checkout and seatmap case</a>.</p>
+      <dl class="facts">
+        <div><dt class="label">Role</dt><dd>Owner of accessibility strategy</dd></div>
+        <div><dt class="label">Span</dt><dd>2022 to 2026</dd></div>
+        <div><dt class="label">Covers</dt><dd>Web checkout, native apps, extras and hospitality, content</dd></div>
+        <div><dt class="label">Markets</dt><dd>UK, US, then Germany, Spain and Austria</dd></div>
+      </dl>
+    </div>
+
+    <div class="tiles" role="list" aria-label="Programme at a glance">
+      <div class="tile" role="listitem"><span class="num">4</span><p>rounds of external review between 2022 and 2026, across UK and US sites</p></div>
+      <div class="tile" role="listitem"><span class="num">5</span><p>severity levels used to order work, from Violation 1 to Barrier 5</p></div>
+      <div class="tile" role="listitem"><span class="num">2</span><p>accessibility lines on the roadmap marked non-negotiable: checkout and apps</p></div>
+      <div class="tile" role="listitem"><span class="num">1</span><p>standard for every market: WCAG 2.2 level AA</p></div>
+    </div>
+
+    <section id="p-problem">
+      <div class="sec-head">
+        <p class="label">The problem</p>
+        <h2>Audits without a system around them</h2>
+      </div>
+      <div class="prose">
+        <p>Reviews were commissioned per site and per market. The UK was reviewed in 2022, two US venue sites in 2024, atgtickets.com end to end in 2025, and standalone and subscription flows in 2026. Each review produced a long list of findings.</p>
+        <p>The same issue shows how this played out. The 2022 review said the seating plan relied on colour. In 2026 the colour-only price indicators were still an open item, deferred to the next seatmap.</p>
+        <p>The programme needed five things: a standard, a way to scope and rate audits, owners for each type of work, a place on the roadmap, and measures.</p>
+      </div>
+    </section>
+
+    <section id="p-audits">
+      <div class="sec-head">
+        <p class="label">Audits</p>
+        <h2>How the audits were designed</h2>
+        <p>Each audit had a different job. Together they cover people with lived experience, expert testing with assistive technology, automated scanning and our own design reviews.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>When</th><th>Scope</th><th>Method</th><th>What it changed</th></tr></thead>
+          <tbody>
+            <tr><td class="d">May 2022</td><td>ATG Tickets, careers site, corporate site and social media</td><td>Experts with lived experience, using assistive technology against WCAG 2.1, with video of a blind screen reader user</td><td>Set the baseline: seating plan colour, carousel, alt text, link text, cognitive load</td></tr>
+            <tr><td class="d">2024</td><td>Kings Theatre and Broadway in Detroit ticket journeys</td><td>Screen reader journey review against WCAG 2.1 by reviewers with lived experience, with video</td><td>Showed that a screen reader user could not select tickets and that the seat layout could not be used by keyboard alone</td></tr>
+            <tr><td class="d">Oct to Nov 2025</td><td>atgtickets.com, end to end: browse, log in, show page, calendar, seatmap, extras, payment, confirmation and tickets in My Account</td><td>Expert manual audit with screen readers against WCAG 2.2, run in rounds</td><td>October covered browse, log in and account pages. November covered the show page, calendar, seatmap and checkout, and found 59 issues including 2 severe and 12 very high. Together they gave the ranked list that drove the checkout plan</td></tr>
+            <tr><td class="d">Jul to Sep 2026</td><td>12 pages across upsells, vouchers and subscriptions</td><td>Expert audit with a screen reader</td><td>73 issues found. Started the next phase outside checkout</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="height:28px"></div>
+      <div class="cols">
+        <div>
+          <h3>Scope by journey and priority</h3>
+          <p>The main audit followed the customer journey end to end on atgtickets.com. Audit page lists were split into phases. Browse and venue pages came first, the seatmap second, and extras and payment third. For the US venue sites, each page had a priority from 1 to 3. For the 2026 audit, every page listed the user actions the auditor needed to perform, so deep states such as a booking with extras could be reached.</p>
+        </div>
+        <div>
+          <h3>One severity scale</h3>
+          <p>Findings were rated by what they do to a customer, from Violation 1 (low) to Barrier 5 (severe). The scale decided the order of work. Anything that stopped a purchase went first.</p>
+        </div>
+        <div>
+          <h3>Providers compared on the job</h3>
+          <p>We compared managed audit and support providers, including one that connects its issue tracker to Jira, and two widget vendors. The decision was expert audits to diagnose, a widget as an interim aid, and fixes made in the product code.</p>
+        </div>
+        <div>
+          <h3>Our own reviews</h3>
+          <p>Accessibility is a weighted dimension, at 10%, in the Product Health Check I use to review flows. The basic checks are colour contrast, keyboard navigation, screen reader labels and touch targets.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="p-roles">
+      <div class="sec-head">
+        <p class="label">Roles</p>
+        <h2>Who does what</h2>
+        <p>Described by role, as documented in the project pages and hand-over notes.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Role</th><th>Responsible for</th></tr></thead>
+          <tbody>
+            <tr><td>Accessibility strategy owner (design)</td><td>The standard and the audit programme, including commissioning the external audit work. I communicate with stakeholders, make sure every new product is audited, and build accessibility into UI delivery through the design system and solution handovers.</td></tr>
+            <tr><td>Initiative owner (product)</td><td>The remediation plan, tickets in Jira, the decision log, stakeholder updates and the hand-over notes.</td></tr>
+            <tr><td>Engineering</td><td>Technical spikes such as seatmap keyboard navigation, accessibility guidelines for engineers, and raising the bar on screen reader support.</td></tr>
+            <tr><td>Test engineers</td><td>Acceptance checks on every fix and automated accessibility tests in the pipeline.</td></tr>
+            <tr><td>Squads: checkout, catalogue, apps, hospitality</td><td>Owning their own roadmap, fixing findings in their own area and testing them in their team channels.</td></tr>
+            <tr><td>Legal</td><td>Told about each deferral and asked to confirm the approach.</td></tr>
+            <tr><td>Contact centre and box office</td><td>Logging contacts from customers who cannot check out online, which feeds a success measure.</td></tr>
+            <tr><td>US ticketing</td><td>Requesting seatmap hover messages and extra accessible seat icons, which joined the seatmap work.</td></tr>
+            <tr><td>External specialists</td><td>Audits, re-audits and the interim widget.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="height:24px"></div>
+      <div class="prose">
+        <p><strong>Ownership follows scope.</strong> The hand-over notes drew a line. If the work is audit-led, with a clear list of findings, a product manager and engineers can own it. If it grows to cover VoiceOver key navigation, questions about what counts as AA, or sign-off that completed work is compliant, a specialist is needed. The advice was to settle that scope question before assigning the next owner.</p>
+      </div>
+    </section>
+
+    <section id="p-design">
+      <div class="sec-head">
+        <p class="label">Accessibility in design</p>
+        <h2>Built into UI delivery</h2>
+        <p>Audits find problems after the build. I introduced accessibility into design so that fewer problems reach the build. It sits in two places: the design system and the solution handover.</p>
+      </div>
+      <div class="cols">
+        <div>
+          <h3>In the design system</h3>
+          <p>Accessibility is part of how a component is defined. The digital ticket component carries WCAG 2.2 AA and large-text safety as requirements. Fixing an issue in the component means every team that uses it inherits the fix, which is why adopting the design system in the apps is on the roadmap as an accessibility enabler.</p>
+        </div>
+        <div>
+          <h3>In solution handovers</h3>
+          <p>Each handover carries accessibility as a written requirement and a test scenario, so delivery teams get both together:</p>
+          <ul class="list" style="margin-top:10px">
+            <li>Colour contrast and touch target size</li>
+            <li>VoiceOver and TalkBack labels</li>
+            <li>Large text on every screen</li>
+            <li>Access information easy to spot, for example on the ticket</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="p-roadmap">
+      <div class="sec-head">
+        <p class="label">Roadmaps</p>
+        <h2>Getting accessibility onto the roadmap</h2>
+        <p>Each development team owns its own roadmap. My job was to keep accessibility visible across all of them. It has its own lines on the product pipeline, and it travels inside projects that touch the same components.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Roadmap item</th><th>Priority class</th><th>Stage, Aug 2026</th><th>Why it is there</th></tr></thead>
+          <tbody>
+            <tr><td>Accessibility improvements: checkout</td><td>Non-negotiable</td><td>Execution, on track</td><td>WCAG 2.2 and European Accessibility Act compliance, and protecting conversion</td></tr>
+            <tr><td>Apps accessibility improvements</td><td>Non-negotiable</td><td>Discovery</td><td>A prerequisite for the European rollout, including tourist markets beyond Germany and Spain</td></tr>
+            <tr><td>Hospitality accessibility improvements</td><td>Venue priority</td><td>Ready for validation</td><td>Complete outstanding WCAG 2.2 work on extras and drinks flows</td></tr>
+            <tr><td>Accessibility automation</td><td>Not yet prioritised</td><td>Ready for validation</td><td>Limited automation today, so the platform can regress over time. To be bundled into the accessibility line</td></tr>
+            <tr><td>Adopt the design system in apps</td><td>Non-negotiable</td><td>Discovery</td><td>One migration unblocks accessibility fixes, dark mode and theming on iOS and Android</td></tr>
+            <tr><td>Dark mode</td><td>Demand-led</td><td>Discovery</td><td>Offered as an accessibility feature. The design system makes it a low-effort follow-on</td></tr>
+            <tr><td>Seatmap hover and extra accessible seat icons</td><td>Not yet prioritised</td><td>Ready for validation</td><td>A request from US ticketing, bundled into the seatmap stream</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="height:24px"></div>
+      <div class="prose">
+        <p>Because teams own their roadmaps, I did not set their priorities. I kept stakeholders informed, took audit findings to the team that owned each area, and made sure any new product was audited.</p>
+        <p>The company roadmap carries the same pattern. Seatmap 2.0 lists accessibility and ADA as part of its scope, and the "platform and must-do" lane names accessibility alongside security and stability. This ties the largest fix, a new seatmap, to a conversion project that already has funding and a date.</p>
+      </div>
+    </section>
+
+    <section id="p-build">
+      <div class="sec-head">
+        <p class="label">How it was built</p>
+        <h2>Five stages</h2>
+      </div>
+      <div class="timeline">
+        <div class="step"><span class="when">2022 to 2024</span><div><h3>Review</h3><p>Reviews in the UK and the US showed the shape of the problem and gave us a baseline.</p></div></div>
+        <div class="step"><span class="when">2025</span><div><h3>Set the standard and the scope</h3><p>For the US launch we adopted WCAG 2.2 AA, which has 55 success criteria. We published an accessibility statement and a contact route, added an interim widget, and commissioned an end-to-end expert audit of atgtickets.com.</p></div></div>
+        <div class="step"><span class="when">Mar to Jun 2026</span><div><h3>Run remediation</h3><p>Findings went into Jira in priority order. A decision log recorded every item we chose not to fix, with its reason and risk. The seatmap keyboard spike set the technical approach.</p></div></div>
+        <div class="step"><span class="when">2026</span><div><h3>Embed</h3><p>Accessibility entered the design system and solution handovers. Checks entered ticket acceptance criteria, automated tests were planned for checkout, success measures were set, accessibility lines were added to the roadmap, and every new product is audited.</p></div></div>
+        <div class="step"><span class="when">Next</span><div><h3>Extend</h3><p>Apps, hospitality and the voucher and upsell screens come next, with an independent specialist review before any formal compliance claim.</p></div></div>
+      </div>
+    </section>
+
+    <section id="p-ops">
+      <div class="sec-head">
+        <p class="label">Operating model</p>
+        <h2>What keeps it running</h2>
+      </div>
+      <div class="cols">
+        <div>
+          <h3>Maintenance</h3>
+          <ul class="list">
+            <li>Automated testing in QA.</li>
+            <li>Manual checks every year.</li>
+            <li>Compliance documentation kept up to date.</li>
+            <li>Vendor and platform compliance checked.</li>
+            <li>Legal requirements reviewed on a schedule.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Launch gating for the US</h3>
+          <p>In November 2025 we separated what had to be ready at launch from what could follow. The accessibility statement, contact route and legal review were ready. Full WCAG 2.2 AA conformance and the maintenance documentation were in progress and tracked as not required for launch.</p>
+        </div>
+        <div>
+          <h3>Where accessibility is written down</h3>
+          <p>WCAG 2.2 AA is a stated requirement in the UX use cases for tickets, transfer, the basket and the app. Content guidelines set the reading age and heading rules. The project pages hold the plan, the decision log and the measures.</p>
+        </div>
+        <div>
+          <h3>Measures</h3>
+          <p>Customers able to check out with assistive tools, fewer reports of being unable to check out online, conversion held, all audit-found A and AA issues resolved, less use of the widget, and automated checks in the pipeline. The widget click trend fell in the US between April and May 2026.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="p-learned">
+      <div class="sec-head">
+        <p class="label">Lessons</p>
+        <h2>What I would do again, and what I would change</h2>
+      </div>
+      <div class="cols">
+        <div>
+          <h3>Do again</h3>
+          <ul class="list">
+            <li>Rate every finding on one scale and let the scale set the order.</li>
+            <li>Log what you will not fix, with a named receiving team.</li>
+            <li>Put WCAG into use-case requirements, so designers meet it before build.</li>
+            <li>Attach accessibility to roadmap items that already have a date.</li>
+            <li>Audit every new product and take the findings to the team that owns it.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Change</h3>
+          <ul class="list">
+            <li>Start automated tests alongside the first fixes, not after them.</li>
+            <li>Name the owner for each scope before the previous owner leaves.</li>
+            <li>Audit extras, vouchers and apps at the same time as checkout.</li>
+            <li>Raise app findings above the lowest priority when they gate a launch.</li>
+          </ul>
+        </div>
+      </div>
+      <div style="height:28px"></div>
+      <p><a class="more" href="#accessibility">Next: accessibility in ticket checkout</a></p>
+    </section>
+  </div>
+
+  <section id="contact" style="padding-block: 0">
+    <div class="contact">
+      <p class="label">Contact</p>
+      <h2>Let's talk about design leadership.</h2>
+      <div class="contact-row">
+        <span class="addr" id="email-text">crisrmacias@gmail.com</span>
+        <button type="button" id="copy-email">Copy email</button>
+        <a class="btn" href="https://linkedin.com/in/cristina-romero-macias" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="label">Cristina Romero Macias · London, United Kingdom</p>
+  </footer>
+</main>
+
+<script>
+(function () {
+  var btn = document.getElementById('copy-email');
+  var txt = document.getElementById('email-text');
+  if (!btn || !txt) return;
+  function selectText() {
+    try {
+      var r = document.createRange(); r.selectNodeContents(txt);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    } catch (e) {}
+  }
+  btn.addEventListener('click', function () {
+    var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy email'; }, 1800); };
+    try {
+      navigator.clipboard.writeText(txt.textContent.trim()).then(done, function () { selectText(); });
+    } catch (e) { selectText(); }
+  });
+})();
+(function () {
+  var home = document.getElementById('view-home');
+  var port = document.getElementById('view-portfolio');
+  var acc = document.getElementById('view-accessibility');
+  var accprog = document.getElementById('view-accprog');
+  var tabHome = document.getElementById('tab-home');
+  var tabPort = document.getElementById('tab-portfolio');
+  var current = null;
+  function route() {
+    var h = (location.hash || '').replace('#', '');
+    if (h === 'contact') return;
+    var map = { portfolio: 'portfolio', accessibility: 'accessibility', 'accessibility-programme': 'accprog', 'design-systems': 'designsystems', localisation: 'localisation', 'quantitative-framework': 'quant' };
+    var next = map[h] || 'home';
+    var ids = { home: 'view-home', portfolio: 'view-portfolio', accessibility: 'view-accessibility', accprog: 'view-accprog', designsystems: 'view-designsystems', localisation: 'view-localisation', quant: 'view-quant' };
+    for (var k in ids) { var el = document.getElementById(ids[k]); if (el) el.hidden = k !== next; }
+    tabHome.removeAttribute('aria-current');
+    tabPort.removeAttribute('aria-current');
+    (next === 'home' ? tabHome : tabPort).setAttribute('aria-current', 'page');
+    if (current !== null && current !== next) {
+      var root = document.documentElement, prev = root.style.scrollBehavior;
+      root.style.scrollBehavior = 'auto';
+      window.scrollTo(0, 0);
+      root.style.scrollBehavior = prev;
+    }
+    current = next;
+  }
+  window.addEventListener('hashchange', route);
+  route();
+})();
+(function () {
+  // Preview mode: open the page at #preview once to turn the case links on in this browser. #preview-off turns them off.
+  function flag(v) {
+    try { if (v === true) localStorage.setItem('cr-preview', '1'); else if (v === false) localStorage.removeItem('cr-preview'); else return localStorage.getItem('cr-preview') === '1'; } catch (e) { return v === true; }
+    return v === true;
+  }
+  function apply(on) {
+    var items = document.querySelectorAll('.more.soon, a.more[data-preview]');
+    for (var i = 0; i < items.length; i++) {
+      var el = items[i];
+      if (on && el.tagName === 'SPAN') {
+        var a = document.createElement('a');
+        a.className = 'more'; a.setAttribute('data-preview', '1');
+        a.href = el.getAttribute('data-href'); a.textContent = 'Read about the initiative';
+        el.parentNode.replaceChild(a, el);
+      } else if (!on && el.tagName === 'A') {
+        var sp = document.createElement('span');
+        sp.className = 'more soon'; sp.setAttribute('data-href', el.getAttribute('href'));
+        sp.innerHTML = 'Read about the initiative &middot; coming soon';
+        el.parentNode.replaceChild(sp, el);
+      }
+    }
+  }
+  function check() {
+    var h = (location.hash || '').replace('#', '');
+    if (h === 'preview') { flag(true); history.replaceState(null, '', '#portfolio'); window.dispatchEvent(new HashChangeEvent('hashchange')); }
+    else if (h === 'preview-off') { flag(false); history.replaceState(null, '', '#portfolio'); window.dispatchEvent(new HashChangeEvent('hashchange')); }
+    apply(flag());
+  }
+  window.addEventListener('hashchange', check);
+  check();
+})();
+</script>
+
+</body>
+</html>
