@@ -1,14 +1,6 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<style>[hidden]{display:none!important}</style>
-</head>
-<body>
-<title>Cristina Romero Macias</title>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><style>[hidden]{display:none!important}</style></head><body><title>Cristina Romero Macias</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
 /* Layout: left-aligned editorial grid. Big name opener, outcome tiles, ticket-stub case cards with a perforated divider, quiet career and skills index. */
 :root {
@@ -70,14 +62,14 @@ header.top {
   padding-inline: max(16px, env(safe-area-inset-left, 0px));
 }
 header.top .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: center; justify-content: space-between; padding-block: 14px; }
-.brand { font-family: var(--font-display); font-weight: 700; text-decoration: none; letter-spacing: -0.01em; }
+.brand { font-family: var(--font-display); font-weight: 600; text-decoration: none; letter-spacing: -0.01em; }
 nav { display: flex; flex-wrap: wrap; gap: 4px 22px; }
 nav a { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; color: var(--muted); padding: 4px 0; }
 nav a:hover { color: var(--accent); }
 
 /* Hero */
 .hero { padding-block: 72px 56px; display: grid; gap: 28px; }
-.hero h1 { font-weight: 800; font-size: clamp(2.4rem, 7.8vw, 5.8rem); line-height: 0.98; letter-spacing: -0.04em; }
+.hero h1 { font-weight: 600; font-size: clamp(2.4rem, 7.8vw, 5.8rem); line-height: 0.98; letter-spacing: -0.03em; }
 .hero .role { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.25rem, 3vw, 1.75rem); color: var(--accent); }
 .hero .lede { max-width: 62ch; font-size: clamp(1.05rem, 2vw, 1.25rem); }
 .hero .meta { display: flex; flex-wrap: wrap; gap: 8px 28px; }
@@ -86,7 +78,7 @@ nav a:hover { color: var(--accent); }
 .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 .tile { padding: 20px 20px 22px 0; display: grid; gap: 6px; align-content: start; min-width: 0; }
 .tile + .tile { padding-left: 20px; border-left: 1px solid var(--line); }
-.tile .num { font-family: var(--font-display); font-weight: 800; font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.tile .num { font-family: var(--font-display); font-weight: 600; font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
 .tile p { color: var(--muted); font-size: 15px; line-height: 1.45; }
 @media (max-width: 700px) {
   .tile + .tile { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
@@ -95,8 +87,8 @@ nav a:hover { color: var(--accent); }
 
 /* Sections */
 section { padding-block: 64px 8px; scroll-margin-top: 64px; }
-.sec-head { display: grid; gap: 10px; margin-bottom: 32px; }
-.sec-head h2 { font-size: clamp(1.9rem, 4.5vw, 3rem); font-weight: 700; }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 { font-size: clamp(1.6rem, 3.4vw, 2.3rem); font-weight: 600; }
 .sec-head p { max-width: 60ch; color: var(--muted); }
 
 /* Case cards */
@@ -108,7 +100,7 @@ section { padding-block: 64px 8px; scroll-margin-top: 64px; }
 }
 .case.wide { grid-column: 1 / -1; }
 .case .body { padding: 26px 26px 24px; display: grid; gap: 14px; align-content: start; }
-.case h3 { font-size: clamp(1.4rem, 2.6vw, 1.9rem); font-weight: 700; }
+.case h3 { font-size: clamp(1.25rem, 2.2vw, 1.55rem); font-weight: 600; }
 .case ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
 .case li { padding-left: 18px; position: relative; color: var(--fg); }
 .case li::before { content: ""; position: absolute; left: 0; top: 0.7em; width: 8px; height: 1px; background: var(--accent); }
@@ -124,7 +116,7 @@ section { padding-block: 64px 8px; scroll-margin-top: 64px; }
 .career { }
 .job { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 8px 32px; padding-block: 22px; border-bottom: 1px solid var(--line); }
 .job .when { font-family: var(--font-mono); font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
-.job h3 { font-size: 1.25rem; font-weight: 700; }
+.job h3 { font-size: 1.25rem; font-weight: 600; }
 .job .org { color: var(--accent); font-weight: 600; }
 .job p { margin-top: 6px; max-width: 70ch; }
 @media (max-width: 700px) { .job { grid-template-columns: minmax(0, 1fr); } }
@@ -137,12 +129,12 @@ section { padding-block: 64px 8px; scroll-margin-top: 64px; }
 
 /* Education */
 .edu { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px 40px; }
-.edu h3 { font-size: 1.15rem; font-weight: 700; margin-top: 6px; }
+.edu h3 { font-size: 1.15rem; font-weight: 600; margin-top: 6px; }
 .edu p { color: var(--muted); font-size: 15px; margin-top: 4px; }
 
 /* Contact */
 .contact { margin-top: 64px; background: var(--fg); color: var(--bg); border-radius: 6px; padding: clamp(28px, 6vw, 56px); display: grid; gap: 22px; }
-.contact h2 { font-size: clamp(2rem, 5vw, 3.4rem); font-weight: 800; }
+.contact h2 { font-size: clamp(1.7rem, 4vw, 2.6rem); font-weight: 600; }
 .contact .label { color: inherit; opacity: 0.7; }
 .contact-row { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; }
 .contact a.btn, .contact button {
@@ -158,7 +150,7 @@ footer { padding-top: 28px; }
 .back:hover { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 #view-accessibility, #view-accprog, #view-designsystems, #view-localisation, #view-quant { padding-top: 40px; }
 .case-hero { display: grid; gap: 22px; padding-block: 32px 40px; }
-.case-hero h1 { font-weight: 800; font-size: clamp(2.3rem, 7vw, 5rem); line-height: 1; letter-spacing: -0.035em; }
+.case-hero h1 { font-weight: 600; font-size: clamp(2rem, 5.2vw, 3.7rem); line-height: 1; letter-spacing: -0.03em; }
 .case-hero .lede { max-width: 66ch; font-size: clamp(1.05rem, 2vw, 1.2rem); }
 .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px 28px; padding-top: 8px; }
 .facts div { display: grid; gap: 4px; min-width: 0; }
@@ -167,14 +159,14 @@ footer { padding-top: 28px; }
 .facts { margin: 0; }
 .prose { max-width: 70ch; display: grid; gap: 14px; }
 .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px 48px; }
-.cols h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; }
+.cols h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 10px; }
 .list { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
 .list li { padding-left: 18px; position: relative; }
 .list li::before { content: ""; position: absolute; left: 0; top: 0.75em; width: 8px; height: 1px; background: var(--accent); }
 .timeline { }
 .step { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 6px 32px; padding-block: 18px; border-bottom: 1px solid var(--line); }
 .step .when { font-family: var(--font-mono); font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
-.step h3 { font-size: 1.15rem; font-weight: 700; }
+.step h3 { font-size: 1.15rem; font-weight: 600; }
 .step p { margin-top: 4px; max-width: 70ch; color: var(--fg); }
 @media (max-width: 700px) { .step { grid-template-columns: minmax(0, 1fr); } }
 .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); }
@@ -200,6 +192,46 @@ nav a[aria-current="page"] { color: var(--fg); box-shadow: inset 0 -2px 0 var(--
 .case .more.soon { display: block; text-align: center; background: color-mix(in srgb, var(--fg) 9%, var(--bg)); color: var(--muted); border-radius: 16px; padding: 14px 18px; font-weight: 500; }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Card-and-pill pass: softer, app-like surfaces */
+:root { --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1); --tint: color-mix(in srgb, var(--accent) 9%, var(--surface)); --tint-line: color-mix(in srgb, var(--accent) 22%, transparent); }
+p.label.pill, .sec-head p.label, .case-hero p.label, .hero > p.label {
+  display: inline-block; justify-self: start; width: fit-content; padding: 6px 14px; border-radius: 999px;
+  background: var(--tint); border: 1px solid var(--tint-line); color: var(--accent); font-weight: 600;
+}
+.hero { justify-items: center; text-align: center; padding-block: 56px 48px; gap: 22px; }
+.hero > p.label { justify-self: center; }
+.hero h1 { font-size: clamp(2.1rem, 5.2vw, 3.9rem); text-wrap: balance; }
+.hero .lede { margin-inline: auto; max-width: 60ch; }
+.hero .lede strong { color: var(--accent); font-weight: 700; }
+.hero .meta { justify-content: center; }
+.tiles { gap: 16px; }
+.tile, .tile + .tile { background: var(--surface); border: 1px solid var(--card-line); border-radius: 28px; box-shadow: var(--shadow); padding: 24px; }
+.cols { gap: 20px; }
+.cols > div { background: var(--surface); border: 1px solid var(--card-line); border-radius: 28px; box-shadow: var(--shadow); padding: 26px; align-content: start; min-width: 0; }
+.cols h3 { margin-bottom: 14px; }
+.list strong { color: var(--accent); font-weight: 700; }
+.facts { background: var(--surface); border: 1px solid var(--card-line); border-radius: 28px; box-shadow: var(--shadow); padding: 20px 28px; margin-top: 8px; }
+.timeline { display: grid; gap: 12px; }
+.step, .job { background: var(--surface); border: 1px solid var(--card-line); border-radius: 24px; box-shadow: var(--shadow); padding: 20px 24px; }
+.career { display: grid; gap: 12px; }
+.step .when, .job .when { justify-self: start; align-self: start; padding: 4px 12px; border-radius: 999px; background: var(--tint); border: 1px solid var(--tint-line); color: var(--accent); font-weight: 600; white-space: nowrap; }
+.skills { gap: 16px; }
+.skill { background: var(--surface); border: 1px solid var(--card-line); border-radius: 24px; box-shadow: var(--shadow); padding: 20px 22px; align-content: start; }
+.contact { border-radius: 28px; }
+.table-wrap { box-shadow: var(--shadow); border-color: var(--card-line); border-radius: 24px; }
+@media (max-width: 700px) { .tile, .tile + .tile { padding: 20px; } .step, .job { padding: 18px; } }
+#ds-outcomes .cols { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+.case .body > p.label { display: inline-block; width: fit-content; padding: 5px 12px; border-radius: 999px; background: var(--tint); border: 1px solid var(--tint-line); color: var(--accent); font-weight: 600; }
+.about-card { padding: 0; }
+.about-card p { max-width: 70ch; font-size: clamp(1.05rem, 2vw, 1.2rem); line-height: 1.65; }
+.about-card strong { color: var(--accent); font-weight: 700; }
+.case { display: flex; flex-direction: column; }
+.case .body { flex: 1; display: flex; flex-direction: column; gap: 14px; }
+.case .stub { margin: auto 0 0; flex-direction: column; align-items: flex-start; gap: 6px; padding: 16px 18px; min-height: 108px; }
+.case .stub .label { color: var(--accent); font-weight: 600; }
+.case .stub .note { color: var(--fg); font-size: 15px; line-height: 1.5; }
+.case .act { margin: 0; }
 </style>
 
 <header class="top">
@@ -216,10 +248,8 @@ nav a[aria-current="page"] { color: var(--fg); box-shadow: inset 0 -2px 0 var(--
 <main class="wrap" id="top">
   <div id="view-home">
   <div class="hero">
-    <p class="label">London, United Kingdom</p>
     <h1>Cristina Romero Macias</h1>
     <p class="role">UX / Product Design Leader</p>
-    <p class="lede">I turn business goals into design strategy, and strategy into products people use. I have 13+ years of experience building and scaling design practices in entertainment, automotive, fintech and media. At ATG I grew a design function from nothing into a team of 12. I led 20+ initiatives from discovery to delivery, from the first native app to digital accessibility and European expansion. I use AI to deliver faster, and behavioural data and experiments to decide with evidence. PhD in Human-Computer Interaction.</p>
     <div class="meta">
       <span class="label">13+ years in design</span>
       <span class="label">Design strategy</span>
@@ -228,6 +258,14 @@ nav a[aria-current="page"] { color: var(--fg); box-shadow: inset 0 -2px 0 var(--
     </div>
     <p><a class="cta" href="#portfolio">View portfolio</a></p>
   </div>
+
+  <section id="about">
+    <div class="sec-head">
+      <p class="label">Profile</p>
+      <h2>About me</h2>
+    </div>
+    <div class="about-card"><p>I turn business goals into design strategy, and strategy into products people use. I have <strong>13+ years</strong> of experience building and scaling design practices in entertainment, automotive, fintech and media. At ATG I grew a design function from nothing into a <strong>team of 12</strong>. I led <strong>20+ initiatives</strong> from discovery to delivery, from the first native app to digital accessibility and European expansion. I use AI to deliver faster, and behavioural data and experiments to decide with evidence. PhD in Human-Computer Interaction.</p></div>
+  </section>
 
   <section id="skills">
     <div class="sec-head">
@@ -337,43 +375,35 @@ nav a[aria-current="page"] { color: var(--fg); box-shadow: inset 0 -2px 0 var(--
     <div class="cases">
       <article class="case">
         <div class="body">
-          <p class="label">ATG Entertainment · Use case</p>
-          <h3>Localisation</h3>
-          <p>I established the localisation process for content design across European and American markets, so the same product reads right in each region and keeps one voice.</p>
-          <p><span class="more soon" data-href="#localisation">Read about the initiative &middot; coming soon</span></p>
-        </div>
-        <div class="perf"></div>
-        <div class="stub"><span class="key">Europe and US</span><span class="note">A repeatable process for content design.</span></div>
-      </article>
-      <article class="case">
-        <div class="body">
-          <p class="label">ATG Entertainment · Use case</p>
-          <h3>UX quantitative framework</h3>
-          <p>I extended the quantitative UX insights model used in the UK and US to European markets, adapting the global platform to each region and informing how offers are best used in the checkout flow.</p>
-          <p><span class="more soon" data-href="#quantitative-framework">Read about the initiative &middot; coming soon</span></p>
-        </div>
-        <div class="perf"></div>
-        <div class="stub"><span class="key">UK, US, Europe</span><span class="note">One insights model across three regions.</span></div>
-      </article>
-      <article class="case">
-        <div class="body">
-          <p class="label">ATG Entertainment · Use case</p>
-          <h3>Accessibility</h3>
-          <p>I led the digital accessibility strategy for ATG: audits, benchmarking against WCAG, and accessibility built into delivery as a non-functional requirement.</p>
-          <p><span class="more soon" data-href="#accessibility">Read about the initiative &middot; coming soon</span></p>
-        </div>
-        <div class="perf"></div>
-        <div class="stub"><span class="key">WCAG</span><span class="note">Audits and benchmarking that feed into how teams plan and ship.</span></div>
-      </article>
-      <article class="case">
-        <div class="body">
-          <p class="label">ATG Entertainment · Use case</p>
           <h3>Design systems</h3>
-          <p>I architected and curated the design system for ATG's digital products to strengthen visual identity, enforce brand consistency and speed up delivery, with tokenisation, a theme builder and distributed governance.</p>
-          <p><span class="more soon" data-href="#design-systems">Read about the initiative &middot; coming soon</span></p>
+          <p>I took an immature system and turned it into a platform: governance that lets teams contribute without a bottleneck, parity on the native apps, a token structure built for several brands, and AI-assisted theming that shortens producer onboarding.</p>
+          <div class="stub"><span class="label">Mission</span><span class="note">One scalable foundation that every product team and producer brand builds on, across web, iOS and Android.</span></div>
+          <p class="act"><span class="more soon" data-href="#design-systems">Read about the initiative &middot; coming soon</span></p>
         </div>
-        <div class="perf"></div>
-        <div class="stub"><span class="key">100% adoption</span><span class="note">Across all digital teams at ATG.</span></div>
+      </article>
+      <article class="case">
+        <div class="body">
+          <h3>Localisation</h3>
+          <p>I set the strategy and process for content design across European and American markets, so each region reads as native while the product keeps one voice.</p>
+          <div class="stub"><span class="label">Mission</span><span class="note">Make every market feel native, with one voice and one repeatable process.</span></div>
+          <p class="act"><span class="more soon" data-href="#localisation">Read about the initiative &middot; coming soon</span></p>
+        </div>
+      </article>
+      <article class="case">
+        <div class="body">
+          <h3>UX quantitative framework</h3>
+          <p>I scaled the quantitative UX insights model from the UK and US to European markets, adapting a global platform to each region to guide how offers are used in checkout.</p>
+          <div class="stub"><span class="label">Mission</span><span class="note">Give every region the same evidence-based way to decide how offers work in checkout.</span></div>
+          <p class="act"><span class="more soon" data-href="#quantitative-framework">Read about the initiative &middot; coming soon</span></p>
+        </div>
+      </article>
+      <article class="case">
+        <div class="body">
+          <h3>Accessibility</h3>
+          <p>I set ATG's digital accessibility strategy: audits, WCAG benchmarking, and accessibility built into delivery as a non-functional requirement instead of a late fix.</p>
+          <div class="stub"><span class="label">Mission</span><span class="note">Make accessibility a standard of how we deliver, so everyone can use ATG's products.</span></div>
+          <p class="act"><span class="more soon" data-href="#accessibility">Read about the initiative &middot; coming soon</span></p>
+        </div>
       </article>
     </div>
   </section>
@@ -644,40 +674,279 @@ nav a[aria-current="page"] { color: var(--fg); box-shadow: inset 0 -2px 0 var(--
     <div class="case-hero">
       <p class="label">ATG Entertainment &middot; UX use case</p>
       <h1>Design systems</h1>
-      <p class="lede">I architected and curated the design system for ATG's digital products to strengthen visual identity, enforce brand consistency and speed up delivery. This case covers the token architecture, the theme builder, how contributions are governed, and how the process is measured.</p>
+      <p class="lede">When I joined ATG in 2022 the design system was immature, and I took ownership of it. This case covers how I set up its process and governance, extended it from web to the iOS and Android apps, rebuilt the token structure, and introduced an AI-assisted theme builder to shorten the days or weeks of manual design work behind each producer-branded experience.</p>
       <dl class="facts">
-        <div><dt class="label">Role</dt><dd>Architect and curator of the design system</dd></div>
-        <div><dt class="label">Built with</dt><dd>Engineering and Marketing</dd></div>
+        <div><dt class="label">Role</dt><dd>Design system owner</dd></div>
+        <div><dt class="label">Started</dt><dd>November 2022</dd></div>
         <div><dt class="label">Platforms</dt><dd>Web, iOS and Android</dd></div>
-        <div><dt class="label">Adoption</dt><dd>All digital teams</dd></div>
+        <div><dt class="label">Current status</dt><dd>Theme builder v1.0 in progress</dd></div>
       </dl>
     </div>
-    <section id="ds-tokens">
-      <div class="sec-head"><p class="label">Tokenisation</p><h2>One set of values, every platform</h2></div>
+
+    <section id="ds-outcomes">
+      <div class="sec-head">
+        <p class="label">Outcomes</p>
+      </div>
       <div class="cols">
-        <div><h3>Tokens</h3><p>Design tokens for colour, type, spacing and other values are defined once in Backdrop, the web component library, and shared with the iOS and Android libraries.</p></div>
-        <div><h3>Migration</h3><p>Products are moving away from hardcoded values onto tokens, so a change to a value is made once and reaches every product that uses it.</p></div>
+        <div>
+          <h3>100% adoption across all platforms</h3>
+          <p>Web, iOS and Android all build on the design system.</p>
+        </div>
+        <div>
+          <h3>Self-serve, distributed governance</h3>
+          <p>Teams contribute and change the system through a defined process and a guild, without waiting on a central team.</p>
+        </div>
+        <div>
+          <h3>A scalable token system</h3>
+          <p>A token structure that supports both in-house and producer brand requirements.</p>
+        </div>
+        <div>
+          <h3>Global standards and AI, built in</h3>
+          <p>The system is built to meet global accessibility standards and to support internationalisation, with AI powering theming, documentation and delivery.</p>
+        </div>
       </div>
     </section>
-    <section id="ds-themes">
-      <div class="sec-head"><p class="label">Theme builder</p><h2>Themes generated from the tokens</h2></div>
-      <div class="prose"><p>The theme builder generates and previews themes from the token set, so brands and products can be themed without custom code. Dark mode comes from adopting the system.</p></div>
+
+    <section id="ds-problem">
+      <div class="sec-head">
+        <p class="label">Starting point</p>
+        <h2>An immature system under growing demand</h2>
+      </div>
+      <div class="prose">
+        <p>The system started in 2019 and was little more than a pattern library. When engineering later chose Material UI as the base for Backdrop, the code library, everything in the design system had to be restructured around it. Designers and contractors then came and went, each inheriting a partly finished system with no real handover.</p>
+        <p>The pattern library was not scalable or robust enough for the needs of the digital products, or to theme ATG's checkout, so the business gave the green light for a design system in the summer of 2022.</p>
+      </div>
     </section>
+
+    <section id="ds-goals">
+      <div class="sec-head">
+        <p class="label">Goals</p>
+        <h2>What the system had to achieve</h2>
+      </div>
+      <div class="prose">
+        <p>My objective was to turn the design system into shared infrastructure: a single foundation every product team adopts, that serves today's products and scales with the business as it adds platforms, markets and brands.</p>
+      </div>
+      <div class="cols" style="margin-top:40px">
+        <div>
+          <h3>Business goals</h3>
+          <ul class="list">
+            <li>Win speed to market for producer brands: take a brand from marketing site to branded checkout in a fraction of the days or weeks it took by hand.</li>
+            <li>Lower the cost of change: stop hardcoded values and one-off components from adding technical debt. <strong>Target: 100% of library changes reflected in the library.</strong></li>
+            <li>Make design system capacity predictable and measurable. <strong>Target: 95%+ of work starts from a ticket, and 85–90% is answered within the published turnaround.</strong></li>
+            <li>Let the platform grow into new markets and brands without rebuilding its foundations.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Product goals</h3>
+          <ul class="list">
+            <li>Make the system the default for every team on web, iOS and Android. <strong>Target: 100% adoption.</strong></li>
+            <li>Keep one source of truth for tokens, so a decision made once reaches every platform.</li>
+            <li>Build accessibility in by default: components that meet WCAG 2.1 Level AA across colour, type and states, including dark mode.</li>
+            <li>Move from a central team to distributed governance, with a guild and named platform owners. <strong>Target: close to zero decisions reopened after review.</strong></li>
+            <li>Build quality in rather than inspecting it afterwards. <strong>Target: 80%+ of components pass visual QA first time, and 100% of handovers complete before build.</strong></li>
+          </ul>
+        </div>
+        <div>
+          <h3>User goals</h3>
+          <ul class="list">
+            <li><strong>Designers and engineers:</strong> find the right component, token and guidance without asking, and build from a complete handover.</li>
+            <li><strong>Designers and engineers:</strong> a clear, quick route to request a change or contribute one, instead of building a one-off.</li>
+            <li><strong>Customers:</strong> one consistent, familiar experience across web, iOS and Android.</li>
+            <li><strong>Customers:</strong> branded checkouts that stay clear, readable and usable by everyone, whichever producer's brand they carry.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="ds-roadmap">
+      <div class="sec-head">
+        <p class="label">Roadmap</p>
+        <h2>From inherited system to platform, 2022 to now</h2>
+        <p>The main milestones, in order. Earlier work by other designers is shown as context.</p>
+      </div>
+      <div class="timeline">
+        <div class="step"><span class="when">2019 to 2022</span><div><h3>A pattern library</h3><p>Started in 2019 as a pattern library and restarted several times as designers and contractors changed. Backdrop became the web component library. It was not scalable or robust enough for the digital products, or to theme ATG's checkout.</p></div></div>
+        <div class="step"><span class="when">Summer 2022</span><div><h3>Green light for the design system</h3><p>The business approved a design system in the summer of 2022, shortly before I joined.</p></div></div>
+        <div class="step"><span class="when">Nov 2022</span><div><h3>I take ownership</h3><p>I joined as Head of Product Design and took over the design system and its direction.</p></div></div>
+        <div class="step"><span class="when">Mar 2023</span><div><h3>Files and themes consolidated</h3><p>Handovers from departing contractors pointed to a single Design System [Beta] in Figma, holding the components, nested components and theme files.</p></div></div>
+        <div class="step"><span class="when">Dec 2023</span><div><h3>A clear list of what was missing</h3><p>The design system lead's handover set out the priorities: automate workflows, version every component alongside Backdrop, clean up naming, add bespoke fonts for new themes, test every component in light and dark across all themes, and organise Backdrop to match the Figma structure of foundations, themes, templates, components, nested components and patterns.</p></div></div>
+        <div class="step"><span class="when">Jul to Sep 2024</span><div><h3>Native apps start</h3><p>Setting up the system to support iOS and Android became an onboarding goal for the app designers. The iOS and Android projects were set up in August and September.</p></div></div>
+        <div class="step"><span class="when">Oct and Dec 2025</span><div><h3>App launches</h3><p>The venue app launched in the UK in October 2025 and in the US in December 2025.</p></div></div>
+        <div class="step"><span class="when">Feb to Apr 2026</span><div><h3>Theming and the app screens</h3><p>Design system theming reached the venue app in February. The account screens were updated to the design system in April.</p></div></div>
+        <div class="step"><span class="when">Jun to Jul 2026</span><div><h3>Governance and intake</h3><p>I drafted the engineering RFC for distributed governance at the end of June. A request inbox for design system requests, with a Slack intake feeding Jira, was in delivery in July.</p></div></div>
+        <div class="step"><span class="when">Aug to Sep 2026</span><div><h3>Tokens, dark mode and AI theming</h3><p>The app design token migration was completed, and the dark mode and Material 3 and iOS 26 work was closed out. The success measures for the design system process were written in early September.</p></div></div>
+        <div class="step"><span class="when">2026</span><div><h3>AI theming hackathon</h3><p>The design system team ran a hackathon on turning producer brand assets into themes with AI, which set the direction for the theme builder.</p></div></div>
+        <div class="step"><span class="when">Q4 2026 to now</span><div><h3>Theme builder v1.0 and the health check</h3><p>Version 1.0 of the theme builder is in progress. The roadmap also covers the quarterly health check, a standard file template, designer education and a repository for AI experiments, skills and documentation.</p></div></div>
+      </div>
+    </section>
+
     <section id="ds-governance">
-      <div class="sec-head"><p class="label">Governance</p><h2>Distributed, with a guild</h2></div>
+      <div class="sec-head">
+        <p class="label">1 &middot; Ownership and governance</p>
+        <h2>Giving the system a process</h2>
+        <p>The first move was to define how change reaches the system, so that quality did not depend on who happened to be asked.</p>
+      </div>
       <div class="cols">
-        <div><h3>Operating model</h3><p>An engineering RFC sets out distributed governance: platform owners and a guild, covering contribution, care, component separation and maintenance. The guild supports innovation, so teams can propose and build without waiting on a central team.</p></div>
-        <div><h3>Request and review process</h3><p>A Slack intake workflow feeds Jira, with full and lite versions of the process depending on the size of the request.</p></div>
+        <div>
+          <h3>One way in</h3>
+          <p>Every change, from a bug fix to a new component, follows the same loop, from a request through design, review and build to release. A Slack intake feeds Jira, with a full and a lite version for requests of different sizes.</p>
+        </div>
+        <div>
+          <h3>Review gates</h3>
+          <p>A design review checks Figma parity for variants, states and tokens. Visual regression runs across every story. The packages ship as separate versioned releases, and risky changes go out as prereleases first so product teams can try them.</p>
+        </div>
+        <div>
+          <h3>Distributed governance</h3>
+          <p>As demand grew I wrote an engineering RFC for distributed governance: platform owners and a guild, covering how teams contribute, how components are cared for, and how maintenance is shared. It is the way to support innovation across teams without a central queue.</p>
+        </div>
+        <div>
+          <h3>Measures and education</h3>
+          <p>Process measures include requests that start with a ticket, complete handoffs, first-pass visual QA and time to resolve escalations. A health check scorecard tracks adoption, time to qualify and capacity unlocked. Education for designers reduces reliance on the system team.</p>
+        </div>
       </div>
     </section>
-    <section id="ds-measures">
-      <div class="sec-head"><p class="label">Measuring the system</p><h2>How we know it works</h2></div>
-      <ul class="list">
-        <li>100% adoption across all digital teams.</li>
-        <li>Process health tracked against targets, such as 95%+ of requests starting with a ticket and 100% complete handoffs.</li>
-        <li>Component documentation for the full library, backed by a Storybook and Figma parity audit.</li>
-        <li>Accessibility built in once and inherited by every product team, as with the digital ticket component.</li>
-      </ul>
+
+    <section id="ds-apps">
+      <div class="sec-head">
+        <p class="label">2 &middot; Native apps</p>
+        <h2>Bringing iOS and Android onto the system</h2>
+        <p>The venue app was built from 2024 and launched in the UK in October 2025 and the US in December 2025. The system had to reach it without waiting to be finished.</p>
+      </div>
+      <div class="cols">
+        <div>
+          <h3>An interim process</h3>
+          <p>While the system was being formalised, app designers worked to a lightweight process. Every component in flight sat on a shared board. Designs used existing components, or were uncomponentised but fully tokenised. No new token names could be invented, because naming belongs to the system team. A design review was the gate before handover to engineers.</p>
+        </div>
+        <div>
+          <h3>Debt made visible</h3>
+          <p>A component that went to build without review was flagged as design debt, not hidden. A component counted as done only when it was built on both iOS and Android with tokens applied on both.</p>
+        </div>
+        <div>
+          <h3>One token source</h3>
+          <p>The same token sources are transformed once and delivered to every platform: a typed package for the web, a Swift package for iOS and a Gradle library for Android. The components themselves are built by hand on each platform, so they follow the web.</p>
+        </div>
+        <div>
+          <h3>What this unlocked in the app</h3>
+          <p>In 2026 the app work included design system theming, a design token migration, dark mode and Material 3 and iOS 26 updates.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="ds-tokens">
+      <div class="sec-head">
+        <p class="label">3 &middot; Token restructure</p>
+        <h2>Rebuilding the token structure</h2>
+        <p>The inherited structure was close to the standard layout in Tokens Studio. To serve web and apps, light and dark, and many brands, it had to be rebuilt around ATG's products and brands, and around meaning instead of appearance.</p>
+      </div>
+      <div class="cols">
+        <div>
+          <h3>Three tiers</h3>
+          <p>Primitive tokens hold raw values. Semantic tokens say what a value is for, such as text, surface or border, and for what significance or state. Component-specific tokens connect a semantic token to a part of one component. A brand changes the primitives, and the meaning stays the same.</p>
+        </div>
+        <div>
+          <h3>A naming model</h3>
+          <p>Names follow a fixed path: category, type, item, sub-item and state. Colour tokens vary by significance (primary, secondary, tertiary) and by interaction state, so a button, a chip and a calendar day are described the same way.</p>
+        </div>
+        <div>
+          <h3>Two kinds of brand</h3>
+          <p>A mono-palette brand works from a single colour. A multi-palette brand has several. The structure supports both, with light and dark for each, so a producer's brand maps onto the system without a custom build.</p>
+        </div>
+        <div>
+          <h3>Learning from other systems</h3>
+          <p>A token restructure workshop compared how established systems, such as Material 3 and Radix Themes, organise their tokens. Tokens are managed in Figma with Tokens Studio, transformed with Style Dictionary and kept in a repository, with a tracker for token adoption across designs.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="ds-theme">
+      <div class="sec-head">
+        <p class="label">4 &middot; Theme builder</p>
+        <h2>From a producer's brand to a theme, with AI</h2>
+        <p>Producers and venues run branded checkouts and landing pages. Each one needs a theme built from their own brand and marketing site.</p>
+      </div>
+      <div class="cols">
+        <div>
+          <h3>How it worked by hand</h3>
+          <p>A manual guide set out the steps: amend the colour palette, create a favicon, resize the header logo to a fixed height, apply the common tokens for the header, page title, info bar, show card, footer, cookie bar and calendar, set the calendar states, and choose up to two fonts. Light and dark modes and bespoke show themes were out of scope.</p>
+        </div>
+        <div>
+          <h3>Why it had to change</h3>
+          <ul class="list">
+            <li>It is hard to capture all the requirements for a theme.</li>
+            <li>Timelines range from three days to two weeks.</li>
+            <li>It needs manual design work, because the design direction does not match the semantic architecture.</li>
+            <li>Sign-off by the product manager and the producer adds more rounds.</li>
+          </ul>
+        </div>
+      </div>
+      <div style="height:28px"></div>
+      <div class="prose">
+        <p>A hackathon with the design system team set the direction. The answer was a self-serve flow: take what the producer or their marketing agency already has, which is a logo, colours and fonts, and let AI do the translation into the token structure, with checks at the points where judgement matters.</p>
+      </div>
+      <div style="height:28px"></div>
+      <div class="timeline">
+        <div class="step"><span class="when">1</span><div><h3>Gather the brand assets</h3><p>Logo, colours and fonts come from the producer or their marketing team, taken from their site and brand. Iconography and photography are optional. If the assets fail a check on colour or font accessibility, they go back to the stakeholder.</p></div></div>
+        <div class="step"><span class="when">2</span><div><h3>Prompt AI to build the theme</h3><p>The assets and requirements go into an AI project set up around the system's semantic structure and key screens, with a shade and tint generator among the tools planned for it. A regional flow or an alternative reference can be added when the brief needs one.</p></div></div>
+        <div class="step"><span class="when">3</span><div><h3>Check accessibility first</h3><p>AI reviews the theme for contrast and legibility. Any issue goes back to the designer to adjust the theme before it moves on.</p></div></div>
+        <div class="step"><span class="when">4</span><div><h3>Design system review</h3><p>The design system team reviews the theme against the system's standards. If it is not approved, the designer iterates.</p></div></div>
+        <div class="step"><span class="when">5</span><div><h3>Try it, then sign off</h3><p>A theme tester shows the theme on key screens, so the producer and the product manager approve something they have seen. Changes loop back to the theme.</p></div></div>
+        <div class="step"><span class="when">6</span><div><h3>Export and hand over</h3><p>The approved theme is exported as JSON and handed to engineering.</p></div></div>
+      </div>
+      <div style="height:28px"></div>
+      <div class="prose">
+        <p>The tool is a roadmap initiative to close the gap between designing a theme, getting it signed off and implementing it. Version 1.0 is in progress. The wider project brief treats a theme as brand plus configuration, with access controls and a live preview, and aims to take Figma out of the loop over time.</p>
+      </div>
+    </section>
+
+    <section id="ds-decisions">
+      <div class="sec-head">
+        <p class="label">Decisions</p>
+        <h2>Calls that shaped the system</h2>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Decision</th><th>Rationale</th><th>Trade-off</th></tr></thead>
+          <tbody>
+            <tr><td>Restructure tokens into primitive, semantic and component tiers.</td><td>One structure for web and apps, light and dark, and many brands.</td><td>A migration for products already built on the inherited tokens.</td></tr>
+            <tr><td>Use an interim process for app designers while the system was formalised.</td><td>The apps could not wait for a finished system.</td><td>A temporary process to replace later, with design debt tracked on a board.</td></tr>
+            <tr><td>Keep naming with the design system team.</td><td>Names that drift stop tokens from working across platforms.</td><td>Designers cannot add tokens on their own and ask for them instead.</td></tr>
+            <tr><td>Use AI to translate brand assets into a theme, with human gates.</td><td>The work was manual, slow and unpredictable, and it follows rules.</td><td>Accessibility review, design review and producer sign-off stay in place, so the time saved is in the drafting.</td></tr>
+            <tr><td>Move to distributed governance.</td><td>The system team should enable teams, not be the only route in.</td><td>The model needs clear ownership and lighter checks, and the RFC is still a draft.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="ds-open">
+      <div class="sec-head">
+        <p class="label">Open items</p>
+        <h2>What remains</h2>
+        <p>I would rather show the open work than hide it.</p>
+      </div>
+      <div class="cols">
+        <ul class="list">
+          <li>Ship version 1.0 of the theme builder and measure the turnaround against the old three-day to two-week range.</li>
+          <li>Finish the token migration across the apps.</li>
+          <li>Close the component gap between web and the iOS and Android libraries.</li>
+        </ul>
+        <ul class="list">
+          <li>Move the distributed governance RFC from draft to agreed.</li>
+          <li>Complete lite documentation for all components and tokens.</li>
+          <li>Refresh the health check each quarter and use it to set priorities.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="ds-learned">
+      <div class="sec-head">
+        <p class="label">Lessons</p>
+        <h2>What I would repeat</h2>
+      </div>
+      <div class="prose">
+        <p>Start with how change enters the system. A process gave the team and its stakeholders something to point to when priorities competed.</p>
+        <p>Structure tokens around meaning. Once the semantic layer was right, brands, modes and platforms became inputs, and AI had something precise to work against.</p>
+        <p>Use AI where the work is rule-based and slow, and keep people where judgement and accountability sit.</p>
+      </div>
     </section>
   </div>
 
@@ -1156,6 +1425,4 @@ nav a[aria-current="page"] { color: var(--fg); box-shadow: inset 0 -2px 0 var(--
   check();
 })();
 </script>
-
-</body>
-</html>
+</body></html>
