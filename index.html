@@ -232,6 +232,59 @@ p.label.pill, .sec-head p.label, .case-hero p.label, .hero > p.label {
 .case .stub .label { color: var(--accent); font-weight: 600; }
 .case .stub .note { color: var(--fg); font-size: 15px; line-height: 1.5; }
 .case .act { margin: 0; }
+
+/* Visual roadmap */
+.phases { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-bottom: 32px; }
+.phase { --c: var(--accent); position: relative; overflow: hidden; display: grid; align-content: start; gap: 6px; background: var(--surface); border: 1px solid var(--card-line); border-radius: 24px; box-shadow: var(--shadow); padding: 24px 20px 20px; }
+.phase::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 6px; background: var(--c); }
+.phase .n { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: color-mix(in srgb, var(--c) 70%, var(--fg)); font-weight: 600; }
+.phase h3 { font-size: 1.2rem; font-weight: 600; }
+.phase .dates { font-family: var(--font-mono); font-size: 13px; color: var(--muted); }
+.phase p { font-size: 15px; line-height: 1.5; color: var(--fg); margin-top: 4px; }
+.p1 { --c: #8A8580; } .p2 { --c: var(--accent); } .p3 { --c: #3B7DD8; } .p4 { --c: #7A5AC8; }
+.timeline { position: relative; padding-left: 36px; }
+.timeline::before { content: ""; position: absolute; left: 11px; top: 14px; bottom: 14px; width: 2px; border-radius: 2px; background: var(--line); }
+.step { position: relative; }
+.step::before { content: ""; position: absolute; left: -31px; top: 24px; width: 14px; height: 14px; border-radius: 50%; background: var(--c, var(--accent)); box-shadow: 0 0 0 4px var(--bg); }
+.step .when { background: color-mix(in srgb, var(--c, var(--accent)) 12%, var(--surface)); border-color: color-mix(in srgb, var(--c, var(--accent)) 32%, transparent); color: color-mix(in srgb, var(--c, var(--accent)) 70%, var(--fg)); }
+.step.p1 { background: transparent; box-shadow: none; border-style: dashed; }
+.step.now { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 14%, transparent), var(--shadow); }
+.step.now::before { box-shadow: 0 0 0 4px var(--bg), 0 0 0 7px color-mix(in srgb, var(--c) 30%, transparent); }
+.nowtag { display: inline-block; margin-right: 10px; padding: 2px 9px; border-radius: 999px; background: var(--accent); color: var(--accent-ink); font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; vertical-align: 3px; }
+@media (max-width: 900px) { .phases { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .phases { grid-template-columns: minmax(0, 1fr); } .timeline { padding-left: 28px; } .timeline::before { left: 7px; } .step::before { left: -27px; } }
+.sub { font-size: 1.15rem; font-weight: 600; }
+.cols p.label { margin-bottom: 10px; }
+.cols .list { margin-top: 14px; }
+
+/* Diagrams */
+.diagrams { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-bottom: 20px; }
+.diag { margin: 0; background: var(--surface); border: 1px solid var(--card-line); border-radius: 28px; box-shadow: var(--shadow); padding: 20px; }
+.diag svg { display: block; width: 100%; height: auto; }
+.diag text { font-family: var(--font-body); fill: var(--fg); }
+.diag .d-cap { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; fill: var(--accent); font-weight: 600; }
+.diag .d-t { font-size: 15px; } .diag .d-t.b { font-weight: 700; font-size: 17px; } .diag .d-t.s { font-size: 13px; fill: var(--muted); }
+.diag .d-box { fill: var(--bg); stroke: var(--line); stroke-width: 1.5; }
+.diag .d-core { fill: var(--tint); stroke: var(--accent); stroke-width: 1.5; }
+.diag .d-bar { fill: var(--tint); stroke: var(--tint-line); stroke-width: 1.5; stroke-dasharray: 5 4; }
+.diag .d-line { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.layers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-bottom: 20px; }
+.layerbox { margin: 0; display: grid; align-content: start; gap: 0; background: var(--surface); border: 1px solid var(--card-line); border-radius: 28px; box-shadow: var(--shadow); padding: 22px; }
+.layerbox figcaption { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 14px; }
+.layer { display: grid; gap: 2px; padding: 12px 16px; border-radius: 14px; background: var(--tint); border: 1px solid var(--tint-line); }
+.layer b { font-weight: 700; font-size: 15px; } .layer span { font-size: 13px; color: var(--muted); }
+.layer.ui { background: var(--fg); border-color: var(--fg); } .layer.ui b { color: var(--bg); }
+.layer.split { grid-template-columns: repeat(3, 1fr); text-align: center; }
+.layer.ghost { background: transparent; border: 2px dashed var(--line); } .layer.ghost b { text-decoration: line-through; color: var(--muted); }
+.arr { height: 18px; position: relative; } .arr::before { content: ""; position: absolute; left: 50%; top: 2px; bottom: 6px; width: 2px; margin-left: -1px; background: var(--accent); }
+.arr::after { content: ""; position: absolute; left: 50%; bottom: 2px; margin-left: -5px; border: 5px solid transparent; border-top-color: var(--accent); border-bottom: 0; }
+.flow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.fstep { position: relative; background: var(--surface); border: 1px solid var(--card-line); border-radius: 24px; box-shadow: var(--shadow); padding: 20px 22px 22px; display: grid; align-content: start; gap: 6px; }
+.fn { display: inline-grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font-family: var(--font-mono); font-weight: 700; font-size: 14px; margin-bottom: 4px; }
+.fstep h3 { font-size: 1.1rem; font-weight: 600; } .fstep p { font-size: 15px; line-height: 1.55; color: var(--muted); }
+.gate { position: absolute; top: 20px; right: 20px; padding: 3px 10px; border-radius: 999px; background: var(--tint); border: 1px solid var(--tint-line); color: var(--accent); font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600; }
+@media (max-width: 900px) { .diagrams { grid-template-columns: minmax(0, 1fr); } .layers { grid-template-columns: minmax(0, 1fr); } .flow { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .flow { grid-template-columns: minmax(0, 1fr); } .gate { position: static; justify-self: start; } }
 </style>
 
 <header class="top">
@@ -690,7 +743,7 @@ p.label.pill, .sec-head p.label, .case-hero p.label, .hero > p.label {
       <div class="cols">
         <div>
           <h3>100% adoption across all platforms</h3>
-          <p>Web, iOS and Android all build on the design system.</p>
+          <p>Web, iOS and Android all build on the design system, and 10 product teams are adopting it.</p>
         </div>
         <div>
           <h3>Self-serve, distributed governance</h3>
@@ -764,27 +817,93 @@ p.label.pill, .sec-head p.label, .case-hero p.label, .hero > p.label {
         <h2>From inherited system to platform, 2022 to now</h2>
         <p>The main milestones, in order. Earlier work by other designers is shown as context.</p>
       </div>
+      <div class="phases">
+        <div class="phase p1"><span class="n">Phase 1</span><h3>Inherit</h3><span class="dates">2019 to summer 2022</span><p>A pattern library, restarted several times, with no continuity.</p></div>
+        <div class="phase p2"><span class="n">Phase 2</span><h3>Foundations</h3><span class="dates">Nov 2022 to May 2023</span><p>Ownership, and a finalised roadmap for components, tokens and migration.</p></div>
+        <div class="phase p3"><span class="n">Phase 3</span><h3>Native apps</h3><span class="dates">2024 to early 2026</span><p>iOS and Android onto the system, and the ATGtickets app launched.</p></div>
+        <div class="phase p4"><span class="n">Phase 4</span><h3>Scale and AI</h3><span class="dates">Apr 2026 to now</span><p>Distributed governance, rebuilt tokens and AI-assisted theming.</p></div>
+      </div>
       <div class="timeline">
-        <div class="step"><span class="when">2019 to 2022</span><div><h3>A pattern library</h3><p>Started in 2019 as a pattern library and restarted several times as designers and contractors changed. Backdrop became the web component library. It was not scalable or robust enough for the digital products, or to theme ATG's checkout.</p></div></div>
-        <div class="step"><span class="when">Summer 2022</span><div><h3>Green light for the design system</h3><p>The business approved a design system in the summer of 2022, shortly before I joined.</p></div></div>
-        <div class="step"><span class="when">Nov 2022</span><div><h3>I take ownership</h3><p>I joined as Head of Product Design and took over the design system and its direction.</p></div></div>
-        <div class="step"><span class="when">Mar 2023</span><div><h3>Files and themes consolidated</h3><p>Handovers from departing contractors pointed to a single Design System [Beta] in Figma, holding the components, nested components and theme files.</p></div></div>
-        <div class="step"><span class="when">Dec 2023</span><div><h3>A clear list of what was missing</h3><p>The design system lead's handover set out the priorities: automate workflows, version every component alongside Backdrop, clean up naming, add bespoke fonts for new themes, test every component in light and dark across all themes, and organise Backdrop to match the Figma structure of foundations, themes, templates, components, nested components and patterns.</p></div></div>
-        <div class="step"><span class="when">Jul to Sep 2024</span><div><h3>Native apps start</h3><p>Setting up the system to support iOS and Android became an onboarding goal for the app designers. The iOS and Android projects were set up in August and September.</p></div></div>
-        <div class="step"><span class="when">Oct and Dec 2025</span><div><h3>App launches</h3><p>The venue app launched in the UK in October 2025 and in the US in December 2025.</p></div></div>
-        <div class="step"><span class="when">Feb to Apr 2026</span><div><h3>Theming and the app screens</h3><p>Design system theming reached the venue app in February. The account screens were updated to the design system in April.</p></div></div>
-        <div class="step"><span class="when">Jun to Jul 2026</span><div><h3>Governance and intake</h3><p>I drafted the engineering RFC for distributed governance at the end of June. A request inbox for design system requests, with a Slack intake feeding Jira, was in delivery in July.</p></div></div>
-        <div class="step"><span class="when">Aug to Sep 2026</span><div><h3>Tokens, dark mode and AI theming</h3><p>The app design token migration was completed, and the dark mode and Material 3 and iOS 26 work was closed out. The success measures for the design system process were written in early September.</p></div></div>
-        <div class="step"><span class="when">2026</span><div><h3>AI theming hackathon</h3><p>The design system team ran a hackathon on turning producer brand assets into themes with AI, which set the direction for the theme builder.</p></div></div>
-        <div class="step"><span class="when">Q4 2026 to now</span><div><h3>Theme builder v1.0 and the health check</h3><p>Version 1.0 of the theme builder is in progress. The roadmap also covers the quarterly health check, a standard file template, designer education and a repository for AI experiments, skills and documentation.</p></div></div>
+        <div class="step p1"><span class="when">2019 to 2022</span><div><h3>A pattern library</h3><p>Started in 2019 as a pattern library and restarted several times as designers and contractors changed. Backdrop became the web component library. It was not scalable or robust enough for the digital products, or to theme ATG's checkout.</p></div></div>
+        <div class="step p1"><span class="when">Summer 2022</span><div><h3>Green light for the design system</h3><p>The business approved a design system in the summer of 2022, shortly before I joined.</p></div></div>
+        <div class="step p2"><span class="when">Nov 2022</span><div><h3>I take ownership</h3><p>I joined as Head of Product Design and took over the design system and its direction.</p></div></div>
+        <div class="step p2"><span class="when">Jan 2023</span><div><h3>Roadmap and design system guild</h3><p>After I took ownership, we finalised a roadmap for component creation, token delivery and migration alignment, and created the design system guild.</p></div></div>
+        <div class="step p2"><span class="when">May 2023</span><div><h3>Ready for teams to migrate</h3><p>The roadmap aimed to have everything ready by May 2023 for teams to start migrating.</p></div></div>
+        <div class="step p3"><span class="when">Jul to Sep 2024</span><div><h3>Native apps start</h3><p>Setting up the system to support iOS and Android became an onboarding goal for the app designers. The iOS and Android projects were set up in August and September.</p></div></div>
+        <div class="step p3"><span class="when">Oct and Dec 2025</span><div><h3>App launches</h3><p>The ATGtickets app launched in the UK in October 2025 and in the US in December 2025.</p></div></div>
+        <div class="step p3"><span class="when">Jan 2026</span><div><h3>Token re-architecture starts</h3><p>The token re-architecture began, restructuring the tokens so they could carry several platforms and brands.</p></div></div>
+        <div class="step p4"><span class="when">Apr 2026</span><div><h3>Governance and documentation restructure</h3><p>The governance and documentation restructure began, moving from a hybrid model to a distributed model.</p></div></div>
+        <div class="step p4"><span class="when">Jun 2026</span><div><h3>AI tooling</h3><p>We started automating documentation, delivery and prototyping in Claude.</p></div></div>
+        <div class="step p4"><span class="when">Aug 2026</span><div><h3>Token migration completed</h3><p>The token migration for web, iOS and Android was completed.</p></div></div>
+        <div class="step p4"><span class="when">Q4 2026</span><div><h3>AI theming hackathon</h3><p>The design system team ran a hackathon on turning producer brand assets into themes with AI, which set the direction for the theme builder.</p></div></div>
+        <div class="step p4 now"><span class="when">Q4 2026 to now</span><div><h3><span class="nowtag">Now</span>Theme builder v1.0 and the health check</h3><p>Version 1.0 of the theme builder is in progress. The roadmap also covers the quarterly health check, a standard file template, designer education and a repository for AI experiments, skills and documentation.</p></div></div>
       </div>
     </section>
 
     <section id="ds-governance">
       <div class="sec-head">
         <p class="label">1 &middot; Ownership and governance</p>
-        <h2>Giving the system a process</h2>
-        <p>The first move was to define how change reaches the system, so that quality did not depend on who happened to be asked.</p>
+        <h2>From a hybrid to a distributed model</h2>
+        <p>Governance changed with the system. Two operating models, each fitted to the stage the system was in.</p>
+      </div>
+      <div class="diagrams">
+        <figure class="diag">
+          <svg viewBox="0 0 520 270" role="img" aria-label="Hybrid model: a central core team with a guild of product team members around it, requests flowing in and the system flowing out.">
+            <text class="d-cap" x="260" y="18" text-anchor="middle">MODEL 1 &#183; HYBRID</text>
+            <rect class="d-core" x="170" y="34" width="180" height="62" rx="16"/>
+            <text class="d-t b" x="260" y="62" text-anchor="middle">Core team</text>
+            <text class="d-t s" x="260" y="82" text-anchor="middle">builds and maintains</text>
+            <g class="d-line"><path d="M260 96 V122 M68 122 H452 M68 122 V150 M196 122 V150 M324 122 V150 M452 122 V150"/></g>
+            <rect class="d-box" x="10" y="150" width="116" height="54" rx="14"/><text class="d-t" x="68" y="182" text-anchor="middle">Product team</text>
+            <rect class="d-box" x="138" y="150" width="116" height="54" rx="14"/><text class="d-t" x="196" y="182" text-anchor="middle">Product team</text>
+            <rect class="d-box" x="266" y="150" width="116" height="54" rx="14"/><text class="d-t" x="324" y="182" text-anchor="middle">Product team</text>
+            <rect class="d-box" x="394" y="150" width="116" height="54" rx="14"/><text class="d-t" x="452" y="182" text-anchor="middle">Product team</text>
+            <rect class="d-bar" x="14" y="222" width="492" height="30" rx="15"/>
+            <text class="d-t s" x="260" y="242" text-anchor="middle">Guild: ideas, requests and product components</text>
+          </svg>
+        </figure>
+        <figure class="diag">
+          <svg viewBox="0 0 520 270" role="img" aria-label="Distributed model: named owners for each platform share a roadmap, components and documentation, with a guild across the product teams.">
+            <text class="d-cap" x="260" y="18" text-anchor="middle">MODEL 2 &#183; DISTRIBUTED</text>
+            <rect class="d-core" x="50" y="34" width="420" height="62" rx="16"/>
+            <text class="d-t b" x="260" y="62" text-anchor="middle">Shared system</text>
+            <text class="d-t s" x="260" y="82" text-anchor="middle">roadmap &#183; components &#183; documentation</text>
+            <g class="d-line"><path d="M100 96 V150 M260 96 V150 M420 96 V150"/></g>
+            <rect class="d-box" x="40" y="150" width="120" height="54" rx="14"/><text class="d-t b" x="100" y="174" text-anchor="middle">Web</text><text class="d-t s" x="100" y="192" text-anchor="middle">named owner</text>
+            <rect class="d-box" x="200" y="150" width="120" height="54" rx="14"/><text class="d-t b" x="260" y="174" text-anchor="middle">iOS</text><text class="d-t s" x="260" y="192" text-anchor="middle">named owner</text>
+            <rect class="d-box" x="360" y="150" width="120" height="54" rx="14"/><text class="d-t b" x="420" y="174" text-anchor="middle">Android</text><text class="d-t s" x="420" y="192" text-anchor="middle">named owner</text>
+            <g class="d-line"><path d="M100 204 V222 M260 204 V222 M420 204 V222"/></g>
+            <rect class="d-bar" x="14" y="222" width="492" height="30" rx="15"/>
+            <text class="d-t s" x="260" y="242" text-anchor="middle">Guild with a defined role across every product team</text>
+          </svg>
+        </figure>
+      </div>
+      <div class="cols">
+        <div>
+          <p class="label">Model 1 &middot; While building the system</p>
+          <h3>Hybrid</h3>
+          <p>A centralised core team kept the system consistent and robust while it was still being built, with a guild of designers and engineers from the product teams around it.</p>
+          <ul class="list">
+            <li>A core team maintained the system and paired with contributors to develop it further.</li>
+            <li>The guild brought ideas and requests from every product team, and members built their own product components.</li>
+            <li>One team held the vision, the priorities and the quality bar while foundations, tokens and components were unfinished.</li>
+            <li>The limit: the guild was informal, a Slack group without defined roles, responsibilities or cadence.</li>
+          </ul>
+        </div>
+        <div>
+          <p class="label">Model 2 &middot; Once the system matured</p>
+          <h3>Distributed</h3>
+          <p>As the system stabilised and demand spread across platforms and brands, I wrote an engineering RFC to share ownership instead of routing everything through one team.</p>
+          <ul class="list">
+            <li>Named owners for each platform, and a guild with a defined role.</li>
+            <li>A clear route to contribute to and extend the system, so teams stop building one-off components while they wait for an unclear review.</li>
+            <li>Shared care of the components, the roadmap and the documentation.</li>
+            <li>The restructure of governance and documentation began in April 2026.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sec-head" style="margin-top:40px">
+        <h3 class="sub">What stayed the same in both models</h3>
       </div>
       <div class="cols">
         <div>
@@ -794,10 +913,6 @@ p.label.pill, .sec-head p.label, .case-hero p.label, .hero > p.label {
         <div>
           <h3>Review gates</h3>
           <p>A design review checks Figma parity for variants, states and tokens. Visual regression runs across every story. The packages ship as separate versioned releases, and risky changes go out as prereleases first so product teams can try them.</p>
-        </div>
-        <div>
-          <h3>Distributed governance</h3>
-          <p>As demand grew I wrote an engineering RFC for distributed governance: platform owners and a guild, covering how teams contribute, how components are cared for, and how maintenance is shared. It is the way to support innovation across teams without a central queue.</p>
         </div>
         <div>
           <h3>Measures and education</h3>
@@ -810,7 +925,7 @@ p.label.pill, .sec-head p.label, .case-hero p.label, .hero > p.label {
       <div class="sec-head">
         <p class="label">2 &middot; Native apps</p>
         <h2>Bringing iOS and Android onto the system</h2>
-        <p>The venue app was built from 2024 and launched in the UK in October 2025 and the US in December 2025. The system had to reach it without waiting to be finished.</p>
+        <p>The ATGtickets app was built from 2024 and launched in the UK in October 2025 and the US in December 2025. The system had to reach it without waiting to be finished.</p>
       </div>
       <div class="cols">
         <div>
@@ -834,26 +949,84 @@ p.label.pill, .sec-head p.label, .case-hero p.label, .hero > p.label {
 
     <section id="ds-tokens">
       <div class="sec-head">
-        <p class="label">3 &middot; Token restructure</p>
-        <h2>Rebuilding the token structure</h2>
-        <p>The inherited structure was close to the standard layout in Tokens Studio. To serve web and apps, light and dark, and many brands, it had to be rebuilt around ATG's products and brands, and around meaning instead of appearance.</p>
+        <p class="label">3 &middot; Token architecture</p>
+        <h2>Re-architecting the tokens for scale</h2>
+        <p>The tokens were first architected on the Material Design 3 model. By December 2025 that structure had a scalability problem, so the architecture was redesigned and migrated across web, iOS and Android.</p>
+      </div>
+      <div class="layers">
+        <figure class="layerbox">
+          <figcaption>Before &middot; Material Design 3 model</figcaption>
+          <div class="layer"><b>Primitive</b><span>raw values</span></div>
+          <div class="arr" aria-hidden="true"></div>
+          <div class="layer"><b>Semantic</b><span>what a value is for</span></div>
+          <div class="arr" aria-hidden="true"></div>
+          <div class="layer"><b>Component</b><span>tokens per component</span></div>
+          <div class="arr" aria-hidden="true"></div>
+          <div class="layer ui"><b>Interface</b></div>
+        </figure>
+        <figure class="layerbox after">
+          <figcaption>After &middot; re-architecture</figcaption>
+          <div class="layer"><b>Primitive</b><span>raw values</span></div>
+          <div class="arr" aria-hidden="true"></div>
+          <div class="layer"><b>Semantic</b><span>what a value is for</span></div>
+          <div class="arr" aria-hidden="true"></div>
+          <div class="layer ghost"><b>Component</b><span>not used</span></div>
+          <div class="arr" aria-hidden="true"></div>
+          <div class="layer ui"><b>Interface</b></div>
+        </figure>
+        <figure class="layerbox pipe">
+          <figcaption>How tokens reach each platform</figcaption>
+          <div class="layer"><b>Figma</b><span>Tokens Studio</span></div>
+          <div class="arr" aria-hidden="true"></div>
+          <div class="layer"><b>Repository</b><span>one source of truth</span></div>
+          <div class="arr" aria-hidden="true"></div>
+          <div class="layer"><b>Style Dictionary</b><span>transforms per platform</span></div>
+          <div class="arr" aria-hidden="true"></div>
+          <div class="layer ui split"><b>Web</b><b>iOS</b><b>Android</b></div>
+        </figure>
       </div>
       <div class="cols">
         <div>
-          <h3>Three tiers</h3>
-          <p>Primitive tokens hold raw values. Semantic tokens say what a value is for, such as text, surface or border, and for what significance or state. Component-specific tokens connect a semantic token to a part of one component. A brand changes the primitives, and the meaning stays the same.</p>
+          <p class="label">Starting point</p>
+          <h3>The Material Design 3 model</h3>
+          <p>The system followed the Material Design 3 approach, with the structure close to the standard layout in Tokens Studio.</p>
+          <ul class="list">
+            <li>Primitive, semantic and component-level layers, with names following a fixed path of category, type, item, sub-item and state.</li>
+            <li>Colour varied by significance and interaction state, so a button, a chip and a calendar day were described the same way.</li>
+            <li>Tokens managed in Figma with Tokens Studio, transformed with Style Dictionary and kept in a repository.</li>
+          </ul>
         </div>
         <div>
-          <h3>A naming model</h3>
-          <p>Names follow a fixed path: category, type, item, sub-item and state. Colour tokens vary by significance (primary, secondary, tertiary) and by interaction state, so a button, a chip and a calendar day are described the same way.</p>
+          <p class="label">December 2025</p>
+          <h3>Where it stopped scaling</h3>
+          <p>The structure worked for the ATG brand theme. It did not stretch to more demanding brands or to the native apps.</p>
+          <ul class="list">
+            <li>A high degree of repetition, and too many intermediate layers before a usable token, adding volume and complexity without adding value.</li>
+            <li>Rigid for branding, difficult to evolve and not ready to serve native use cases seamlessly.</li>
+            <li>The internal brand and other bespoke brands would have needed a large number of bespoke tokens, which would be harder to maintain and scale.</li>
+          </ul>
         </div>
         <div>
-          <h3>Two kinds of brand</h3>
-          <p>A mono-palette brand works from a single colour. A multi-palette brand has several. The structure supports both, with light and dark for each, so a producer's brand maps onto the system without a custom build.</p>
+          <p class="label">January to August 2026</p>
+          <h3>The re-architecture</h3>
+          <p>A token restructure workshop compared how established systems, such as Material 3 and Radix Themes, organise their tokens, and set the rules for the new structure.</p>
+          <ul class="list">
+            <li>Fewer layers: the component tier was not used in the re-tokenisation. Primitives are referenced only by semantic tokens, and components use semantic tokens directly, never primitives or brand tokens.</li>
+            <li>One structure for web and apps, without duplicating tokens across them.</li>
+            <li>Backwards compatibility for Backdrop and its consumers, and legacy debt removed along the way.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cols" style="margin-top:20px">
+        <div>
+          <p class="label">Outcome</p>
+          <h3>A structure that grows without debt</h3>
+          <p>The architecture supports base themes such as the ATG brand, and more bespoke brands, without extra layers or unnecessary bespoke tokens. Changes stay local, branding is easier to extend, and the system can grow without accumulating technical debt, which raises efficiency and shortens delivery. A mono-palette brand and a multi-palette brand both fit, in light and dark.</p>
         </div>
         <div>
-          <h3>Learning from other systems</h3>
-          <p>A token restructure workshop compared how established systems, such as Material 3 and Radix Themes, organise their tokens. Tokens are managed in Figma with Tokens Studio, transformed with Style Dictionary and kept in a repository, with a tracker for token adoption across designs.</p>
+          <p class="label">Delivery</p>
+          <h3>Migrated across all three platforms</h3>
+          <p>Token architecture ideation began in January 2026 and moved into migration delivery, completed in August 2026 for web, iOS and Android. A tracker follows token adoption across designs.</p>
         </div>
       </div>
     </section>
@@ -884,13 +1057,13 @@ p.label.pill, .sec-head p.label, .case-hero p.label, .hero > p.label {
         <p>A hackathon with the design system team set the direction. The answer was a self-serve flow: take what the producer or their marketing agency already has, which is a logo, colours and fonts, and let AI do the translation into the token structure, with checks at the points where judgement matters.</p>
       </div>
       <div style="height:28px"></div>
-      <div class="timeline">
-        <div class="step"><span class="when">1</span><div><h3>Gather the brand assets</h3><p>Logo, colours and fonts come from the producer or their marketing team, taken from their site and brand. Iconography and photography are optional. If the assets fail a check on colour or font accessibility, they go back to the stakeholder.</p></div></div>
-        <div class="step"><span class="when">2</span><div><h3>Prompt AI to build the theme</h3><p>The assets and requirements go into an AI project set up around the system's semantic structure and key screens, with a shade and tint generator among the tools planned for it. A regional flow or an alternative reference can be added when the brief needs one.</p></div></div>
-        <div class="step"><span class="when">3</span><div><h3>Check accessibility first</h3><p>AI reviews the theme for contrast and legibility. Any issue goes back to the designer to adjust the theme before it moves on.</p></div></div>
-        <div class="step"><span class="when">4</span><div><h3>Design system review</h3><p>The design system team reviews the theme against the system's standards. If it is not approved, the designer iterates.</p></div></div>
-        <div class="step"><span class="when">5</span><div><h3>Try it, then sign off</h3><p>A theme tester shows the theme on key screens, so the producer and the product manager approve something they have seen. Changes loop back to the theme.</p></div></div>
-        <div class="step"><span class="when">6</span><div><h3>Export and hand over</h3><p>The approved theme is exported as JSON and handed to engineering.</p></div></div>
+      <div class="flow">
+        <div class="fstep"><span class="fn">1</span><h3>Gather the brand assets</h3><p>Logo, colours and fonts come from the producer or their marketing team, taken from their site and brand. Iconography and photography are optional. If the assets fail a check on colour or font accessibility, they go back to the stakeholder.</p></div>
+        <div class="fstep"><span class="fn">2</span><h3>Prompt AI to build the theme</h3><p>The assets and requirements go into an AI project set up around the system's semantic structure and key screens, with a shade and tint generator among the tools planned for it. A regional flow or an alternative reference can be added when the brief needs one.</p></div>
+        <div class="fstep"><span class="fn">3</span><span class="gate">Gate &middot; accessibility</span><h3>Check accessibility first</h3><p>AI reviews the theme for contrast and legibility. Any issue goes back to the designer to adjust the theme before it moves on.</p></div>
+        <div class="fstep"><span class="fn">4</span><span class="gate">Gate &middot; system review</span><h3>Design system review</h3><p>The design system team reviews the theme against the system's standards. If it is not approved, the designer iterates.</p></div>
+        <div class="fstep"><span class="fn">5</span><span class="gate">Gate &middot; sign-off</span><h3>Try it, then sign off</h3><p>A theme tester shows the theme on key screens, so the producer and the product manager approve something they have seen. Changes loop back to the theme.</p></div>
+        <div class="fstep"><span class="fn">6</span><h3>Export and hand over</h3><p>The approved theme is exported as JSON and handed to engineering.</p></div>
       </div>
       <div style="height:28px"></div>
       <div class="prose">
@@ -907,9 +1080,9 @@ p.label.pill, .sec-head p.label, .case-hero p.label, .hero > p.label {
         <table>
           <thead><tr><th>Decision</th><th>Rationale</th><th>Trade-off</th></tr></thead>
           <tbody>
-            <tr><td>Restructure tokens into primitive, semantic and component tiers.</td><td>One structure for web and apps, light and dark, and many brands.</td><td>A migration for products already built on the inherited tokens.</td></tr>
+            <tr><td>Re-architect the tokens with fewer layers, leaving out the component tier.</td><td>Repetition and too many intermediate layers made the structure rigid and hard to scale, and bespoke brands would have needed many bespoke tokens.</td><td>A migration for products already built on the previous tokens, with backwards compatibility kept for Backdrop and its consumers.</td></tr>
             <tr><td>Use an interim process for app designers while the system was formalised.</td><td>The apps could not wait for a finished system.</td><td>A temporary process to replace later, with design debt tracked on a board.</td></tr>
-            <tr><td>Keep naming with the design system team.</td><td>Names that drift stop tokens from working across platforms.</td><td>Designers cannot add tokens on their own and ask for them instead.</td></tr>
+            <tr><td>Keep token naming with the design system team. Designers request new tokens instead of creating them.</td><td>If every team names tokens its own way, the names drift apart and the tokens stop working across web, iOS and Android.</td><td>Designers cannot add a token on their own. They raise a request and wait for it.</td></tr>
             <tr><td>Use AI to translate brand assets into a theme, with human gates.</td><td>The work was manual, slow and unpredictable, and it follows rules.</td><td>Accessibility review, design review and producer sign-off stay in place, so the time saved is in the drafting.</td></tr>
             <tr><td>Move to distributed governance.</td><td>The system team should enable teams, not be the only route in.</td><td>The model needs clear ownership and lighter checks, and the RFC is still a draft.</td></tr>
           </tbody>
