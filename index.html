@@ -149,7 +149,7 @@ footer { padding-top: 28px; }
 /* Case page */
 .back { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; color: var(--fg); border: 1.5px solid var(--fg); border-radius: 999px; padding: 8px 16px 8px 12px; background: var(--surface); }
 .back:hover { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
-#view-accessibility, #view-accprog, #view-designsystems, #view-localisation, #view-quant { padding-top: 40px; }
+#view-accessibility, #view-accprog, #view-designsystems, #view-localisation, #view-ai, #view-quant { padding-top: 40px; }
 .case-hero { display: grid; gap: 22px; padding-block: 32px 40px; }
 .case-hero h1 { font-weight: 600; font-size: clamp(2rem, 5.2vw, 3.7rem); line-height: 1; letter-spacing: -0.03em; }
 .case-hero .lede { max-width: 66ch; font-size: clamp(1.05rem, 2vw, 1.2rem); }
@@ -338,7 +338,7 @@ p.label.pill, .sec-head p.label, .case-hero p.label, .hero > p.label {
       <p class="label">Profile</p>
       <h2>About me</h2>
     </div>
-    <div class="about-card"><p>I turn business goals into design strategy, and strategy into products people use. I have <strong>13+ years</strong> of experience building and scaling design practices in entertainment, automotive, fintech and media. At ATG I grew a design function from nothing into a <strong>team of 12</strong>. I led <strong>20+ initiatives</strong> from discovery to delivery, from the first native app to digital accessibility and European expansion. I use AI to deliver faster, and behavioural data and experiments to decide with evidence. PhD in Human-Computer Interaction.</p></div>
+    <div class="about-card"><p>I turn business goals into design strategy, and strategy into products people use. <strong>13+ years</strong> of experience building and scaling design practices in entertainment, automotive, fintech and media. At ATG, a design function grew from nothing into a <strong>team of 12</strong> and took <strong>20+ initiatives</strong> from discovery to delivery, from the first native app to digital accessibility and European expansion. AI speeds up delivery, and behavioural data and experiments ground decisions in evidence. PhD in Human-Computer Interaction.</p></div>
   </section>
 
   <section id="skills">
@@ -435,7 +435,7 @@ p.label.pill, .sec-head p.label, .case-hero p.label, .hero > p.label {
     <div class="sec-head">
       <p class="label">Head of Product Design · Nov 2022 to present</p>
       <h2>ATG Entertainment</h2>
-      <p>Four areas where I set the strategy and the standards for ATG's digital products.</p>
+      <p>Five areas where the strategy and standards for ATG's digital products are set.</p>
     </div>
 
   <div class="tiles" role="list" aria-label="Selected outcomes at ATG Entertainment">
@@ -450,7 +450,7 @@ p.label.pill, .sec-head p.label, .case-hero p.label, .hero > p.label {
       <article class="case">
         <div class="body">
           <h3>Design systems</h3>
-          <p>I took an immature system and turned it into a platform: governance that lets teams contribute without a bottleneck, parity on the native apps, a token structure built for several brands, and AI-assisted theming that shortens producer onboarding.</p>
+          <p>An immature system turned into a platform: governance that lets teams contribute without a bottleneck, parity on the native apps, a token structure built for several brands, and AI-assisted theming that shortens producer onboarding.</p>
           <div class="stub"><span class="label">Mission</span><span class="note">One scalable foundation that every product team and producer brand builds on, across web, iOS and Android.</span></div>
           <p class="act"><a class="more" href="#design-systems">Read about the initiative</a></p>
         </div>
@@ -465,18 +465,26 @@ p.label.pill, .sec-head p.label, .case-hero p.label, .hero > p.label {
       </article>
       <article class="case">
         <div class="body">
+          <h3>AI &amp; Design</h3>
+          <p>A digital transformation of how the design team works: an AI design guild, hackathons, prompt design and code prototyping that turn individual experiments into shared methods.</p>
+          <div class="stub"><span class="label">Mission</span><span class="note">Use AI where it saves the most time, with people checking the work that matters.</span></div>
+          <p class="act"><span class="more soon" data-href="#ai">Read about the initiative</span></p>
+        </div>
+      </article>
+      <article class="case">
+        <div class="body">
           <h3>UX quantitative framework</h3>
-          <p>I scaled the quantitative UX insights model from the UK and US to European markets, adapting a global platform to each region to guide how offers are used in checkout.</p>
+          <p>The quantitative UX insights model, scaled from the UK and US to European markets: a global platform adapted to each region based on quantitative and qualitative data.</p>
           <div class="stub"><span class="label">Mission</span><span class="note">Give every region the same evidence-based way to decide how offers work in checkout.</span></div>
-          <p class="act"><span class="more soon" data-href="#quantitative-framework">Read about the initiative &middot; coming soon</span></p>
+          <p class="act"><span class="more soon" data-href="#quantitative-framework">Read about the initiative</span></p>
         </div>
       </article>
       <article class="case">
         <div class="body">
           <h3>Accessibility</h3>
-          <p>I set ATG's digital accessibility strategy: audits, WCAG benchmarking, and accessibility built into delivery as a non-functional requirement instead of a late fix.</p>
+          <p>ATG's digital accessibility strategy: audits, WCAG benchmarking, and accessibility built into delivery as a non-functional requirement instead of a late fix.</p>
           <div class="stub"><span class="label">Mission</span><span class="note">Make accessibility a standard of how we deliver, so everyone can use ATG's products.</span></div>
-          <p class="act"><span class="more soon" data-href="#accessibility">Read about the initiative &middot; coming soon</span></p>
+          <p class="act"><span class="more soon" data-href="#accessibility">Read about the initiative</span></p>
         </div>
       </article>
     </div>
@@ -1405,6 +1413,204 @@ p.label.pill, .sec-head p.label, .case-hero p.label, .hero > p.label {
     </section>
   </div>
 
+  <div id="view-ai" hidden>
+    <a class="back" href="#portfolio"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>Portfolio</a>
+    <div class="case-hero">
+      <p class="label">ATG Entertainment &middot; Global initiative</p>
+      <h1>AI &amp; Design</h1>
+      <p class="lede">AI came into the design team by looking for the process gaps where efficiency could be gained, then building shared ways of working around them. An AI design guild and a series of hackathons turned individual experiments into agreed methods, skills and tools for research, prototyping, content and the design system. The same thinking now shapes AI inside the product, where an AI concierge concept was tested with customers in the UK and US.</p>
+      <dl class="facts">
+        <div><dt class="label">Role</dt><dd>Initiative owner</dd></div>
+        <div><dt class="label">Covers</dt><dd>Research, prototyping, content, the design system and the product</dd></div>
+        <div><dt class="label">Tools</dt><dd>Claude, Figma and Miro</dd></div>
+        <div><dt class="label">Output</dt><dd>An AI design guild, hackathons, Claude skills and a theme builder in progress</dd></div>
+      </dl>
+    </div>
+
+    <div class="tiles" role="list" aria-label="AI at a glance">
+      <div class="tile" role="listitem"><span class="num">50%+</span><p>faster prototyping</p></div>
+      <div class="tile" role="listitem"><span class="num">2 to 1</span><p>weeks for research synthesis, halved</p></div>
+      <div class="tile" role="listitem"><span class="num">3</span><p>hackathon working groups, one for each biggest theme in the retro</p></div>
+      <div class="tile" role="listitem"><span class="num">5</span><p>Claude skills for recurring design tasks</p></div>
+    </div>
+
+    <section id="ai-stages">
+      <div class="sec-head">
+        <p class="label">The journey</p>
+        <h2>From process gaps to the product</h2>
+        <p>Each stage started from how the team actually worked, not from a tool.</p>
+      </div>
+      <div class="phases">
+        <div class="phase p1"><span class="n">Stage 1</span><h3>Find the gaps</h3><p>Look for the steps in the design process where time is lost to manual work.</p></div>
+        <div class="phase p2"><span class="n">Stage 2</span><h3>Take stock</h3><p>A team retro on how well AI is improving the design workflow, including what is not working.</p></div>
+        <div class="phase p3"><span class="n">Stage 3</span><h3>Build</h3><p>Hackathons, working groups, shared methods and Claude skills for the recurring tasks.</p></div>
+        <div class="phase p4"><span class="n">Stage 4</span><h3>Product</h3><p>The same approach applied to AI in the product, tested with customers before launch.</p></div>
+      </div>
+    </section>
+
+    <section id="ai-retro">
+      <div class="sec-head">
+        <p class="label">Stage 2 &middot; Take stock</p>
+        <h2>A retro before a roadmap</h2>
+        <p>The team was asked one question: how well are we using AI to improve process efficiency in our design workflow? Seventy-nine notes were sorted into four groups.</p>
+      </div>
+      <div class="cols">
+        <div>
+          <h3>How it is used</h3>
+          <ul class="list">
+            <li>Research and data synthesis: transcripts, surveys and several Miro boards on one topic.</li>
+            <li>Code prototypes and rough layouts to take into Figma.</li>
+            <li>Mockup images, theme and colour tests, and icon sets for the design system.</li>
+            <li>Translation and regional content, and polished dev handover.</li>
+            <li>Seatmap SVGs that unblock engineers.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>What works</h3>
+          <ul class="list">
+            <li>Faster time to insight, and synthesis of research that used to be manual.</li>
+            <li>Prototypes in real code with complex interactions.</li>
+            <li>Coded visual design within reach of non-technical designers.</li>
+            <li>Quick sketching, and a way to get unstuck.</li>
+          </ul>
+        </div>
+      </div>
+      <div style="height:20px"></div>
+      <div class="cols">
+        <div>
+          <h3>What does not</h3>
+          <ul class="list">
+            <li>Results that are not always reliable, including hallucinated data, and no quality control standards.</li>
+            <li>Heavy steering and reprompting, and a gap between a prototype and the engineering stack.</li>
+            <li>Endless output, so that AI is needed to digest the output of AI.</li>
+            <li>Documents that do not say whether they are final or a "first Claude draft".</li>
+            <li>A design system that Claude interprets loosely.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>What the team asked for</h3>
+          <ul class="list">
+            <li>Quality control before AI-generated work is shared.</li>
+            <li>The design system connected fully to Claude, with coded components.</li>
+            <li>Fixed tools and processes for recurring tasks, using skills as well as connectors.</li>
+            <li>A full AI design workflow that becomes the norm.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="prose" style="margin-top:20px">
+        <p>The critique stayed in the plan. The three largest clusters, research, prototyping and the design system, became the three working groups of the hackathon.</p>
+      </div>
+    </section>
+
+    <section id="ai-hack">
+      <div class="sec-head">
+        <p class="label">Stage 3 &middot; Build</p>
+        <h2>Hackathon working groups</h2>
+        <p>Each group took one part of the design lifecycle and chose one or two ideas to build in the sprint.</p>
+      </div>
+      <div class="cols">
+        <div>
+          <h3>Research and usability testing</h3>
+          <p>A project brief tool that starts from a PRD. It asks follow-up questions about the audience, the timeframe, the decisions the team needs to make, competitors and technical limits, then recommends a method and feeds a roadmap for the project.</p>
+        </div>
+        <div>
+          <h3>Design system and visual design</h3>
+          <p>The theme builder, which lets a producer's logo, colours and fonts be translated into the token structure by AI, with checks where judgement matters. It is described in the design systems case.</p>
+        </div>
+      </div>
+      <div style="height:20px"></div>
+      <div class="sec-head" style="margin-top:12px">
+        <h3>Wireframing, prototyping and ideation</h3>
+        <p>The group worked out a method for prototypes that stakeholders can click and customers can test.</p>
+      </div>
+      <div class="flow">
+        <div class="fstep"><span class="gate">Prompt</span><span class="fn">1</span><h3>Start from a PRD</h3><p>A well organised PRD, written with Claude, gives better output. Say upfront where the prototype will live and that it is a hosted, multi-page prototype.</p></div>
+        <div class="fstep"><span class="gate">Wireframe</span><span class="fn">2</span><h3>Ideate the idea</h3><p>Wireframe with Claude Design, then ideate components before full pages.</p></div>
+        <div class="fstep"><span class="gate">Brand</span><span class="fn">3</span><h3>Style it in ATG's brand</h3><p>The Figma connector brings in existing designs. Styling was more accurate from the live site than from the design system, which raised the question of whether the system needed better setup.</p></div>
+        <div class="fstep"><span class="gate">Code</span><span class="fn">4</span><h3>Code it simply</h3><p>Ask for simple HTML, CSS and JavaScript instead of React, in a mobile frame of 390 by 844, and steer the output with more context.</p></div>
+        <div class="fstep"><span class="gate">Host</span><span class="fn">5</span><h3>Host and test</h3><p>The code lives in GitHub and goes to a simple host, so the prototype can be shared and usability tested.</p></div>
+      </div>
+      <div class="prose" style="margin-top:20px">
+        <p>Prototyping speed rose by at least 50%, and research synthesis turnaround halved, from two weeks to one. Claude-powered research analysis also put insight into daily use, with research now cited in decisions at least daily.</p>
+      </div>
+    </section>
+
+    <section id="ai-skills">
+      <div class="sec-head">
+        <p class="label">Stage 3 &middot; Build</p>
+        <h2>Skills for recurring tasks</h2>
+        <p>One of the retro's asks was a fixed way of doing each recurring task. Skills package the method so that anyone on the team gets the same result.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Skill</th><th>What it does</th></tr></thead>
+          <tbody>
+            <tr><td>Regional UX copy</td><td>Writes UX copy in the UK or US tone of voice, using ATG's own content design guide, then runs an AI-writing quality check before it ships.</td></tr>
+            <tr><td>UX research and design</td><td>Builds personas, journey maps and usability test plans, and synthesises research findings.</td></tr>
+            <tr><td>UI design system</td><td>Generates tokens, colour palettes and type scales, checks WCAG contrast and prepares developer handoff.</td></tr>
+            <tr><td>Competitive teardown</td><td>Turns pricing, reviews, job postings and SEO signals into a scored competitor comparison, SWOT and action plan.</td></tr>
+            <tr><td>Seatmap level outlines</td><td>Draws padded, rounded outlines around the seating levels of a Figma seat map, through the Figma connector.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="ai-product">
+      <div class="sec-head">
+        <p class="label">Stage 4 &middot; Product</p>
+        <h2>An AI concierge, tested before launch</h2>
+        <p>When AI moved into the product, the question was how much personality it should have. Two concepts for a concierge in the subscriptions renewal flow were tested with 24 customers across the UK and the US, on desktop and mobile web.</p>
+      </div>
+      <div class="cols">
+        <div>
+          <h3>Concept 1: "ATG's Box Office, powered by AI"</h3>
+          <p>Tech-focused, functional and unobtrusive. It invites the customer to start, and does not push.</p>
+        </div>
+        <div>
+          <h3>Concept 2: "Theo at the Box Office"</h3>
+          <p>Personified, prominent and conversational. A named character with warmth and a point of view.</p>
+        </div>
+      </div>
+      <div class="tiles" role="list" aria-label="Concept test findings" style="margin-top:28px">
+        <div class="tile" role="listitem"><span class="num">8 / 12</span><p>said Theo stood out on the page, against 3 of 12 for the tech-focused concept</p></div>
+        <div class="tile" role="listitem"><span class="num">100%</span><p>understood the sparkle icon as an AI feature, while 3 of 12 missed it on the custom icon</p></div>
+        <div class="tile" role="listitem"><span class="num">17 / 24</span><p>felt more positive about the ATG brand because of the feature</p></div>
+      </div>
+      <div class="cols" style="margin-top:28px">
+        <div>
+          <h3>The direction</h3>
+          <ul class="list">
+            <li>Theo, with iterations: keep the purple button and floating toast for discoverability.</li>
+            <li>Label it clearly as AI, for example "Theo, your AI assistant", so that the name is not mistaken for a person.</li>
+            <li>Use the sparkle icon in place of the custom one.</li>
+            <li>Say upfront what it can help with, such as date, location, budget and genre, and what it cannot yet do, such as bookings and refunds.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>What customers wanted instead</h3>
+          <ul class="list">
+            <li>Suggested questions less centred on London and Broadway. Only 1 of 6 regional UK participants found them relevant.</li>
+            <li>Shows near me, last-minute or cheap seats, and shows by genre or for families.</li>
+            <li>The "AI can make mistakes" disclaimer kept.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="ai-learned">
+      <div class="sec-head">
+        <p class="label">Lessons</p>
+        <h2>What carries over</h2>
+      </div>
+      <div class="prose">
+        <p>Start from the process, not the tool. The retro found the gaps first, and the hackathon groups followed the themes it found.</p>
+        <p>Keep the critique in the room. Reliability, volume and unclear draft status were raised as loudly as the speed gains, and each one points to a control: quality checks before work is shared, a human review step in translation, and a clear label on anything AI-made.</p>
+        <p>Give the AI the context it needs. Output improved when the prompt said where the prototype would live, what the design system was and which voice to write in, and styling was more accurate from the live site than from the design system, which is a prompt to set the system up better for AI.</p>
+        <p>Name AI as AI, in the team and in the product. Customers were comfortable with a human name as long as the feature was clearly labelled.</p>
+      </div>
+    </section>
+  </div>
+
   <div id="view-quant" hidden>
     <a class="back" href="#portfolio"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>Portfolio</a>
     <div class="case-hero">
@@ -1738,10 +1944,10 @@ p.label.pill, .sec-head p.label, .case-hero p.label, .hero > p.label {
   function route() {
     var h = (location.hash || '').replace('#', '');
     if (h === 'contact') return;
-    var map = { portfolio: 'portfolio', accessibility: 'accessibility', 'accessibility-programme': 'accprog', 'design-systems': 'designsystems', localisation: 'localisation', 'quantitative-framework': 'quant' };
+    var map = { portfolio: 'portfolio', accessibility: 'accessibility', 'accessibility-programme': 'accprog', 'design-systems': 'designsystems', localisation: 'localisation', ai: 'ai', 'quantitative-framework': 'quant' };
     var next = map[h] || 'home';
     if (next !== 'home' && next !== 'portfolio' && !unlocked()) { pending = location.hash; next = 'portfolio'; openGate(); }
-    var ids = { home: 'view-home', portfolio: 'view-portfolio', accessibility: 'view-accessibility', accprog: 'view-accprog', designsystems: 'view-designsystems', localisation: 'view-localisation', quant: 'view-quant' };
+    var ids = { home: 'view-home', portfolio: 'view-portfolio', accessibility: 'view-accessibility', accprog: 'view-accprog', designsystems: 'view-designsystems', localisation: 'view-localisation', ai: 'view-ai', quant: 'view-quant' };
     for (var k in ids) { var el = document.getElementById(ids[k]); if (el) el.hidden = k !== next; }
     tabHome.removeAttribute('aria-current');
     tabPort.removeAttribute('aria-current');
@@ -1775,7 +1981,7 @@ p.label.pill, .sec-head p.label, .case-hero p.label, .hero > p.label {
       } else if (!on && el.tagName === 'A') {
         var sp = document.createElement('span');
         sp.className = 'more soon'; sp.setAttribute('data-href', el.getAttribute('href'));
-        sp.innerHTML = 'Read about the initiative &middot; coming soon';
+        sp.innerHTML = 'Read about the initiative';
         el.parentNode.replaceChild(sp, el);
       }
     }
